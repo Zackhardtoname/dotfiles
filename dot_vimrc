@@ -1,0 +1,68 @@
+call plug#begin('~/.vim/plugged')
+
+Plug 'lervag/vimtex'
+let g:tex_flavor='latex'
+let g:vimtex_view_method='mupdf'
+let g:vimtex_quickfix_mode=2
+"disable all warnings
+"let g:vimtex_quickfix_latexlog = {'default' : 0}
+
+" Disable overfull/underfull \hbox and all package warnings
+let g:vimtex_quickfix_latexlog = {
+      \ 'overfull' : 0,
+      \ 'underfull' : 0,
+      \ 'packages' : {
+      \   'default' : 0,
+      \ },
+      \}
+
+Plug 'KeitaNakamura/tex-conceal.vim'
+set conceallevel=2
+let g:tex_conceal='abdmg'
+
+Plug 'morhetz/gruvbox'
+
+Plug 'SirVer/ultisnips'
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
+let g:UltiSnipsListSnippets = '<s-tab>'
+
+Plug 'honza/vim-snippets'
+
+"Figure support
+inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
+nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
+
+Plug 'zxqfl/tabnine-vim'
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+
+Plug '907th/vim-auto-save'
+let g:auto_save = 1
+			
+call plug#end()
+
+" editor
+set number
+set ts=4 sw=4
+autocmd InsertEnter,InsertLeave * set cul!
+
+setlocal spell
+set spelllang=en_us
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+
+inoremap jk <Esc> " new line without entering Insert mode
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+
+" theme (must be after plugins)
+let g:gruvbox_guisp_fallback = "bg"
+colorscheme gruvbox
+set bg=dark
+
+" auto resize quickfix
+au FileType qf call AdjustWindowHeight(3, 10)
+function! AdjustWindowHeight(minheight, maxheight)
+  exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
+endfunction
