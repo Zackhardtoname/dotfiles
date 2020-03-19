@@ -199,7 +199,7 @@ source "$BASH_IT"/bash_it.sh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-# chezmoi auto git
+# chezmoi
 [sourceVCS]
     autoCommit = true
     autoPush = true
