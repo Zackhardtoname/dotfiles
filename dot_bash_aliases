@@ -1,3 +1,2 @@
 alias v="nvim"
 alias chezmoi="~/bin/chezmoi"
-alias gd="cd ~/Downloads/delete"
