@@ -108,7 +108,7 @@ if [ -f ~/.bash_aliases ]; then
         . ~/.bash_aliases
 fi
 
-function cdbm { 
+function bm { 
    ENTRY=$(grep "$1" $HOME/.config/gtk-3.0/bookmarks) 
    DIR=$(echo "$ENTRY" | sed 's|file://||g' | cut -d' ' -f1)
    cd $DIR
