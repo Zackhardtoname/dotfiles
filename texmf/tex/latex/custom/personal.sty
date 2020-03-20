@@ -11,5 +11,19 @@
 }
 
 \urlstyle{same}
+
+% figure support
+\RequirePackage{import}
+\RequirePackage{xifthen}
+\pdfminorversion=7
+\RequirePackage{pdfpages}
+\RequirePackage{transparent}
+\newcommand{\incfig}[1]{%
+	\def\svgwidth{\columnwidth}
+	\import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
 \endinput
 %%
