@@ -17,7 +17,7 @@ def math():
 		return False
 endglobal
 
-snippet template "Basic template" b
+snippet obselete_template "Basic template" b
 \documentclass[a4paper]{article}
 
 \usepackage[utf8]{inputenc}
@@ -663,13 +663,18 @@ snippet "(\\?\w+)(,\.|\.,)" "Vector postfix" ri
 \vec{`!p snip.rv=match.group(1)`}
 endsnippet 
 
-snippet startnote "Start Note"
+snippet template "general template"
 \documentclass[class=scrartcl, crop=false]{standalone}
 
 \usepackage[sexy]{evan}
+{$1:% color
+\usepackage{xcolor}
+\pagecolor[rgb]{0.157, 0.157, 0.157}
+\color[rgb]{0.996, 0.843, 0.686}
+}
 
 \date{`date +%F`}
-\title{$1}
+\title{$2}
 
 \begin{document}
 
