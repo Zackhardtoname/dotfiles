@@ -1,5 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'tpope/vim-surround'
+
 Plug 'lervag/vimtex'
 let g:tex_flavor='latex'
 let g:vimtex_view_method='mupdf'
@@ -68,3 +70,54 @@ function! AdjustWindowHeight(minheight, maxheight)
 endfunction
 
 set clipboard^=unnamed
+
+" Time out for key mapping and sequence respectively
+set timeoutlen=500
+set ttimeoutlen=0
+
+" Trigger filetype based plugins and indentations
+filetype plugin indent on
+
+" Relative numbering
+set number relativenumber
+
+" Use the appropriate number of spaces instead of tab, and set tab size to 2
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+
+" Never scroll all the way to the bottom of the page
+set scrolloff=3
+
+" Set all registers to clipboard. Maybe change at a later date to better take
+" advantage of registers
+set clipboard=unnamedplus
+
+" Better searching
+set inccommand=nosplit
+set incsearch
+set hlsearch
+
+" Wildmenu better complete
+set wildmenu
+set wildmode=longest:list,full
+
+" Splits open at the bottom and right:
+set splitbelow splitright
+
+
+"" Commands
+
+" Write to read only file
+cmap w!! w !sudo tee % > /dev/null
+
+
+"" Mappings
+
+" C-v to paste in insert mode
+inoremap <c-v> <esc>:set paste<cr>a<c-r>=getreg('+')<cr><esc>:set nopaste<cr>mi`[=`]`ia
+
+" Move inside line
+nmap <C-J> gj
+nmap <C-K> gk
