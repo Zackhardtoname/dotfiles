@@ -595,8 +595,13 @@ _\text{$1} $0
 endsnippet
 
 context "math()"
+snippet t "In Math Text"
+\text{ $1 } $0
+endsnippet
+
+context "math()"
 snippet tt "text" iA
-\text{$1}$0
+\text{ $1 } $0
 endsnippet
 
 context "math()"
@@ -701,10 +706,6 @@ $0
 \end{document}
 endsnippet
 
-context "math()"
-snippet t "In Math Text"
-\\text{$1} $0
-endsnippet
 
 snippet oinf "One to infinity"
 _{n = 1}^{\infty}$0
@@ -760,4 +761,15 @@ endsnippet
 snippet wrt "with respect to" iA
 w.r.t. 
 endsnippet
+
+context "math()"
+snippet ep "epsilon" wA
+\epsilon
+endsnippet
+
+context "math()"
+snippet dt "delta" wA
+\delta
+endsnippet
+
 # vim:ft=snippets
