@@ -198,8 +198,3 @@ export SCM_CHECK=true
 source "$BASH_IT"/bash_it.sh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-# chezmoi
-[sourceVCS]
-    autoCommit = true
-    autoPush = true
