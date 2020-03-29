@@ -41,7 +41,7 @@ let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
 
 Plug '907th/vim-auto-save'
-let g:auto_save = 1
+let g:auto_save = 0
 			
 call plug#end()
 
