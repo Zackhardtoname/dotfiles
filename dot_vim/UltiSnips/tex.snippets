@@ -89,7 +89,7 @@ snippet fig "Figure environment" b
 endsnippet
 
 snippet enum "Enumerate" bA
-\begin{enumerate}
+\begin{enumerate}[a.]
 	\item $0
 \end{enumerate}
 endsnippet
@@ -282,7 +282,7 @@ snippet conj "conjugate" iA
 endsnippet
 
 snippet sum "sum" w
-\sum_{n=${1:1}}^{${2:\infty}} ${3:a_n z^n}
+\sum_{n=${1:1}}^{${2:\infty}} ${3:a_n}
 endsnippet
 
 snippet taylor "taylor" w
@@ -343,11 +343,11 @@ snippet rij "mrij" i
 endsnippet
 
 snippet <= "leq" iA
-\le 
+\le
 endsnippet
 
 snippet >= "geq" iA
-\ge 
+\ge
 endsnippet
 
 context "math()"
@@ -758,7 +758,12 @@ Theorem $1
 $0
 endsnippet
 
+context "math()"
 snippet st "with respect to" A
+\text{ such that } 
+endsnippet
+
+snippet st "with respect to"
 such that 
 endsnippet
 
