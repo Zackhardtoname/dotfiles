@@ -36,9 +36,9 @@ Plug 'honza/vim-snippets'
 inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
 nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
 
-Plug 'zxqfl/tabnine-vim'
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
+"Plug 'zxqfl/tabnine-vim'
+"let g:ycm_key_list_select_completion=[]
+"let g:ycm_key_list_previous_completion=[]
 
 Plug '907th/vim-auto-save'
 let g:auto_save = 0
@@ -70,6 +70,7 @@ function! AdjustWindowHeight(minheight, maxheight)
 endfunction
 
 set clipboard^=unnamed
+set mouse=a
 
 " Time out for key mapping and sequence respectively
 set timeoutlen=500
@@ -84,6 +85,8 @@ set number relativenumber
 " Use the appropriate number of spaces instead of tab, and set tab size to 2
 set expandtab
 set tabstop=2
+" Shift to the next round tab stop. 
+set shiftround
 set shiftwidth=2
 set softtabstop=2
 
@@ -96,8 +99,15 @@ set clipboard=unnamedplus
 
 " Better searching
 set inccommand=nosplit
+" Highlight while search
 set incsearch
+" Enable Highlight Search
 set hlsearch
+set ignorecase
+" Overrides ignorecase if pattern contains upcase
+set smartcase
+" Press <leader> Enter to remove search highlights
+noremap <silent> <leader><cr> :noh<cr>
 
 " Wildmenu better complete
 set wildmenu
@@ -110,7 +120,7 @@ set splitbelow splitright
 "" Commands
 
 " Write to read only file
-cmap w!! w !sudo tee % > /dev/null
+cmap w!! w !sudo tee % >/dev/null
 
 
 "" Mappings
@@ -127,3 +137,16 @@ cnoremap <C-h> <Left>
 cnoremap <C-j> <Down>
 cnoremap <C-k> <Up>
 cnoremap <C-l> <Right>
+
+" Quickly source .vimrc
+nnoremap <leader>r :source $MYVIMRC<CR>
+" Quickly quit editting without save
+nnoremap <leader>q :q!<CR>
+" Select all text
+nnoremap vA ggVG
+" Quick Save
+nnoremap <S-s> :w<CR>
+" Yank to end of line
+nnoremap Y y$
+"Delete to the end of line
+nnoremap D d$
