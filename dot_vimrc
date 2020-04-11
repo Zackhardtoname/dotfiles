@@ -139,7 +139,7 @@ cnoremap <C-k> <Up>
 cnoremap <C-l> <Right>
 
 " Quickly source .vimrc
-nnoremap <leader>r :source $MYVIMRC<CR>
+nnoremap <leader>r :source $MYVIMRC <bar> :call UltiSnips#RefreshSnippets()<CR>
 " Quickly quit editting without save
 nnoremap <leader>q :q!<CR>
 " Select all text
