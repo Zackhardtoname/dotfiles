@@ -1,5 +1,5 @@
 global !p
-texMathZones = ['texMathZone'+x for x in ['A', 'AS', 'B', 'BS', 'C', 'CS', 'D', 'DS', 'E', 'ES', 'F', 'FS', 'G', 'GS', 'H', 'HS', 'I', 'IS', 'J', 'JS', 'K', 'KS', 'L', 'LS', 'DS', 'V', 'W', 'X', 'Y', 'Z']]
+texMathZones = ['texMathZone' + x for x in ['A', 'AS', 'B', 'BS', 'C', 'CS', 'D', 'DS', 'E', 'ES', 'F', 'FS', 'G', 'GS', 'H', 'HS', 'I', 'IS', 'J', 'JS', 'K', 'KS', 'L', 'LS', 'DS', 'V', 'W', 'X', 'Y', 'Z', 'AmsA', 'AmsB', 'AmsC', 'AmsD', 'AmsE', 'AmsF', 'AmsG', 'AmsAS', 'AmsBS', 'AmsCS', 'AmsDS', 'AmsES', 'AmsFS', 'AmsGS' ]]
 
 texIgnoreMathZones = ['texMathText']
 
@@ -111,7 +111,7 @@ snippet pac "Package" b
 endsnippet
 
 snippet => "implies" Ai
-\implies
+\implies 
 endsnippet
 
 snippet =< "implied by" Ai
@@ -759,11 +759,11 @@ $0
 endsnippet
 
 context "math()"
-snippet st "with respect to" A
+snippet st "such that" A
 \text{ such that } 
 endsnippet
 
-snippet st "with respect to"
+snippet st ""
 such that 
 endsnippet
 
@@ -779,6 +779,11 @@ endsnippet
 context "math()"
 snippet dt "delta" wA
 \delta
+endsnippet
+
+context "math()"
+snippet si "equation comment" bA
+\shortintertext{$0:}
 endsnippet
 
 # vim:ft=snippets
