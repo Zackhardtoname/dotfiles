@@ -56,6 +56,8 @@ inoremap <C-s> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 inoremap jk <Esc>
 inoremap kj <Esc> 
+inoremap JK <Esc>
+inoremap KJ <Esc>
 
 " new line without entering Insert mode
 nmap <S-Enter> O<Esc>
@@ -147,8 +149,10 @@ nnoremap <leader>r :source $MYVIMRC <bar> :call UltiSnips#RefreshSnippets()<CR>
 nnoremap <leader>q :q!<CR>
 " Select all text
 nnoremap vA ggVG
-" Quick Save
-nnoremap <S-s> :w<CR>
+
+" Quick Save disabled due to IdeaVim problems
+" nnoremap <S-s> :w<CR>
+
 " Yank to end of line
 nnoremap Y y$
 "Delete to the end of line
