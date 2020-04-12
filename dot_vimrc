@@ -54,7 +54,10 @@ setlocal spell
 set spelllang=en_us
 inoremap <C-s> <c-g>u<Esc>[s1z=`]a<c-g>u
 
-inoremap jk <Esc> " new line without entering Insert mode
+inoremap jk <Esc>
+inoremap kj <Esc> 
+
+" new line without entering Insert mode
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
