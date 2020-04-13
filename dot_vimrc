@@ -60,7 +60,7 @@ inoremap JK <Esc>
 inoremap KJ <Esc>
 
 " new line without entering Insert mode
-nmap <S-Enter> O<Esc>
+nnoremap <silent> [<space>  :<c-u>put!=repeat([''],v:count)<bar>']+1<cr>
 nmap <CR> o<Esc>
 
 " theme (must be after plugins)
@@ -157,3 +157,8 @@ nnoremap vA ggVG
 nnoremap Y y$
 "Delete to the end of line
 nnoremap D d$
+
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
