@@ -118,3 +118,4 @@ function bm {
    cd $DIR
 }
 export PATH=~/.npm-global/bin:$PATH
+cd /home/zack/Downloads
