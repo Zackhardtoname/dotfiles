@@ -198,3 +198,4 @@ export SCM_CHECK=true
 source "$BASH_IT"/bash_it.sh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+cd /home/zack/Downloads
