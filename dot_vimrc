@@ -1,5 +1,4 @@
 call plug#begin('~/.vim/plugged')
-
 Plug 'tpope/vim-surround'
 
 Plug 'lervag/vimtex'
@@ -43,6 +42,10 @@ nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/
 Plug '907th/vim-auto-save'
 let g:auto_save = 0
 			
+Plug 'tpope/vim-unimpaired'
+
+" Plug 'kana/vim-textobj-user'
+" Plug 'kana/vim-textobj-line'
 call plug#end()
 
 " editor
@@ -52,10 +55,11 @@ autocmd InsertEnter,InsertLeave * set cul!
 
 setlocal spell
 set spelllang=en_us
-inoremap <C-s> <c-g>u<Esc>[s1z=`]a<c-g>u
+" inoremap <C-s> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 inoremap jk <Esc>
-inoremap kj <Esc> 
+" Disabled due to get rid of lag for 'mk'
+" inoremap kj <Esc> 
 inoremap JK <Esc>
 inoremap KJ <Esc>
 
@@ -86,6 +90,9 @@ filetype plugin indent on
 
 " Relative numbering
 set number relativenumber
+
+" to make Vim’s :! shell behave like your command prompt
+" set shellcmdflag=-ic
 
 " Use the appropriate number of spaces instead of tab, and set tab size to 2
 set expandtab
@@ -150,8 +157,9 @@ nnoremap <leader>q :q!<CR>
 " Select all text
 nnoremap vA ggVG
 
-" Quick Save disabled due to IdeaVim problems
-" nnoremap <S-s> :w<CR>
+" Quick Save not shift s due to IdeaVim problems
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <esc>:w<CR>i<Right>
 
 " Yank to end of line
 nnoremap Y y$
