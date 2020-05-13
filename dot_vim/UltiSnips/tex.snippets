@@ -123,7 +123,7 @@ snippet iff "iff" Ai
 \iff
 endsnippet
 
-snippet mk "Math" wA
+snippet mk "Math" wAi
 $${1}$`!p
 if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
 	snip.rv = ' '
@@ -244,7 +244,7 @@ snippet bmat "bmat" iA
 endsnippet
 
 context "math()"
-snippet () "left( right)" iA
+snippet () "left( right)" i
 \left( ${1:${VISUAL}} \right) $0
 endsnippet
 
@@ -282,7 +282,7 @@ snippet conj "conjugate" iA
 endsnippet
 
 snippet sum "sum" w
-\sum_{n=${1:1}}^{${2:\infty}} ${3:a_n}
+\sum_{${1:n}=${2:1}}^{${3:\infty}} ${0:a_n}
 endsnippet
 
 snippet taylor "taylor" w
@@ -777,13 +777,26 @@ snippet ep "epsilon" wA
 endsnippet
 
 context "math()"
-snippet dt "delta" wA
+snippet dt "delta" w
 \delta
 endsnippet
 
 context "math()"
 snippet si "equation comment" bA
 \shortintertext{$0:}
+endsnippet
+
+context "math()"
+snippet app "approximately" wi
+\approx 
+endsnippet
+
+snippet sol "solution" b
+\begin{sol}[$1]
+  \begin{enumerate}[a.]
+    \item $0
+  \end{enumerate} 
+\end{sol}
 endsnippet
 
 # vim:ft=snippets
