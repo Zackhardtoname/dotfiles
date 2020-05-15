@@ -1,5 +1,5 @@
 alias v="nvim"
-alias c="~/bin/chezmoi"
+alias c="chezmoi edit --apply"
 alias o='xdg-open'
 alias ll='ls -alF'
 alias res="pkill --oldest chrome; sleep 1; sudo reboot"
