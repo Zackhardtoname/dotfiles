@@ -1,0 +1,5 @@
+ServerAliveInterval 60
+# SSH multiplexing
+Host *
+  ControlMaster auto
+  ControlPath ~/.ssh/master-%r@%h:%p
