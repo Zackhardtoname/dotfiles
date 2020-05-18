@@ -305,7 +305,10 @@ exec --no-startup-id pcmanfm
 # disable spotify as it always moves me there after logging in
 # exec --no-startup-id spotify
 exec --no-startup-id discord
+exec --no-startup-id gnome-terminal 
 
+# rid urgent color from started apps
+exec --no-startup-id ~/.i3/rid_urgent_color.sh &
 # Color palette used for the terminal ( ~/.Xresources file )
 #
 # Colors are gathered based on the documentation:
@@ -460,5 +463,4 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+shift+x exec systemctl reboot
 bindsym mod1+a exec flameshot gui
 
-# rid urgent color from started apps
-exec ~/.i3/rid_urgent_color.sh &
+
