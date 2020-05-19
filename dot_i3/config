@@ -59,9 +59,9 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec google-chrome-stable 
-bindsym $mod+F3 exec pcmanfm
+bindsym $mod+F3 exec dolphin
 # bindsym $mod+F3 exec ranger
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
+bindsym $mod+Shift+F3 exec dolphin_pkexec
 bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
@@ -184,7 +184,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
 assign [class="Google-chrome"] $ws1
-assign [class="Pcmanfm"] $ws3
+assign [class="dolphin"] $ws3
 # assign [class="Spotify"] $ws7
 for_window [class="Spotify"] move to workspace $ws7
 #, workspace --no-auto-back-and-forth $ws7
@@ -301,11 +301,10 @@ exec dropbox
 exec --no-startup-id barrier
 
 exec --no-startup-id google-chrome-stable 
-exec --no-startup-id pcmanfm
+exec --no-startup-id dolphin
 # disable spotify as it always moves me there after logging in
 # exec --no-startup-id spotify
 exec --no-startup-id discord
-exec --no-startup-id gnome-terminal 
 
 # rid urgent color from started apps
 exec --no-startup-id ~/.i3/rid_urgent_color.sh &
