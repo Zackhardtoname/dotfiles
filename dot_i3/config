@@ -185,6 +185,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 # Open applications on specific workspaces
 assign [class="Google-chrome"] $ws1
 assign [class="dolphin"] $ws3
+assign [class="jetbrains-pycharm"] $ws4
 # assign [class="Spotify"] $ws7
 for_window [class="Spotify"] move to workspace $ws7
 #, workspace --no-auto-back-and-forth $ws7
