@@ -3,7 +3,7 @@ Plug 'tpope/vim-surround'
 
 Plug 'lervag/vimtex'
 let g:tex_flavor='latex'
-let g:vimtex_view_method='mupdf'
+let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=2
 "disable all warnings
 "let g:vimtex_quickfix_latexlog = {'default' : 0}
@@ -16,6 +16,7 @@ let g:vimtex_quickfix_latexlog = {
       \   'default' : 0,
       \ },
       \}
+let g:vimtex_compiler_progname = 'nvr'
 
 Plug 'KeitaNakamura/tex-conceal.vim'
 set conceallevel=2
@@ -170,3 +171,13 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+" use Ctrl-^ to toggle "Caps Lock"
+" Execute 'lnoremap x X' and 'lnoremap X x' for each letter a-z.
+for c in range(char2nr('A'), char2nr('Z'))
+  execute 'lnoremap ' . nr2char(c+32) . ' ' . nr2char(c)
+  execute 'lnoremap ' . nr2char(c) . ' ' . nr2char(c+32)
+endfor
+
+" Kill the capslock when leaving insert mode.
+autocmd InsertLeave * set iminsert=0
