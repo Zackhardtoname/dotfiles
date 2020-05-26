@@ -117,5 +117,8 @@ function bm {
    DIR=$(echo "$ENTRY" | sed 's|file://||g' | cut -d' ' -f1)
    cd $DIR
 }
+
 export PATH=~/.npm-global/bin:$PATH
-cd /home/zack/Downloads
+export PATH=/opt:$PATH
+
+cd ./Downloads
