@@ -461,7 +461,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 ##################################################
 # Personal
-bindsym $mod+shift+x exec systemctl reboot
+bindsym $mod+Shift+p exec systemctl reboot
 bindsym mod1+a exec flameshot gui
 
 
