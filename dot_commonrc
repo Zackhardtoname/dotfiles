@@ -1,0 +1,17 @@
+[ -f ~/.fzf.bash ] && . ~/.fzf.bash
+
+[ -f ~/.bash_aliases ] && . ~/.bash_aliases
+
+[ -f ~/.bash_docker ] && . ~/.bash_docker
+
+[ -f ~/.nokia_stuff ] && . ~/.nokia_stuff
+
+[ -f ~/.zsh_aliases ] && . ~/.zsh_aliases
+
+function bm { 
+   ENTRY=$(grep "$1" $HOME/.config/gtk-3.0/bookmarks) 
+   DIR=$(echo "$ENTRY" | sed 's|file://||g' | cut -d' ' -f1)
+   cd $DIR
+}
+
+[ -d ./Downloads ] && cd ./Downloads
