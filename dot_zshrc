@@ -104,21 +104,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-if [ -f ~/.bash_aliases ]; then
-        . ~/.bash_aliases
-fi
-
-if [ -f ~/.zsh_aliases ]; then
-        . ~/.zsh_aliases
-fi
-
-function bm { 
-   ENTRY=$(grep "$1" $HOME/.config/gtk-3.0/bookmarks) 
-   DIR=$(echo "$ENTRY" | sed 's|file://||g' | cut -d' ' -f1)
-   cd $DIR
-}
-
 export PATH=~/.npm-global/bin:$PATH
 export PATH=/opt:$PATH
 
-cd ./Downloads
+if [ -f ~/.commonrc ]; then
+    . ~/.commonrc
+fi
