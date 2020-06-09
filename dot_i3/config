@@ -464,4 +464,6 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+Shift+p exec systemctl reboot
 bindsym mod1+a exec flameshot gui
 
-
+# move focused workspace between monitors
+bindsym $mod+Ctrl+greater move workspace to output right
+bindsym $mod+Ctrl+less move workspace to output left
