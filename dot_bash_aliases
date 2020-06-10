@@ -1,6 +1,6 @@
 # Common
 alias v="nvim"
-alias c="chezmoi add"
+alias c="~/bin/chezmoi"
 alias o='xdg-open'
 alias ll='ls -alF'
 alias res="pkill --oldest chrome; sleep 1; sudo reboot"
@@ -8,8 +8,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# Git
-alias acp="gaa; gc; gp"
 
 # Ubuntu
 alias sapt="sudo apt"
