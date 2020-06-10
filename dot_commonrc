@@ -15,3 +15,6 @@ function bm {
 }
 
 [ -d ./Downloads ] && cd ./Downloads
+
+export VISUAL=nvim
+export EDITOR="$VISUAL"
