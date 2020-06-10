@@ -3,3 +3,19 @@ ServerAliveInterval 60
 Host *
   ControlMaster auto
   ControlPath ~/.ssh/master-%r@%h:%p
+
+# Personal GitHub account
+Host github.com-personal
+ HostName github.com
+ User git
+ AddKeysToAgent yes
+ IdentityFile ~/.ssh/id_rsa_personal
+ IdentitiesOnly yes
+
+# Work GitHub account
+Host github.com
+ HostName github.com
+ User git
+ AddKeysToAgent yes
+ IdentityFile ~/.ssh/id_rsa
+ IdentitiesOnly yes
