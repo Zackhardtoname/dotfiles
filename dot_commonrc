@@ -10,13 +10,20 @@
 
 [ -f ~/.credentials ] && . ~/.credentials
 
-function bm { 
-   ENTRY=$(grep "$1" $HOME/.config/gtk-3.0/bookmarks) 
-   DIR=$(echo "$ENTRY" | sed 's|file://||g' | cut -d' ' -f1)
-   cd $DIR
-}
-
 [ -d ./Downloads ] && cd ./Downloads
 
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+
+
+function bm { 
+  ENTRY=$(grep "$1" $HOME/.config/gtk-3.0/bookmarks) 
+  DIR=$(echo "$ENTRY" | sed 's|file://||g' | cut -d' ' -f1)
+  cd $DIR
+}
+
+
+function b {
+  m --brightness $1 --contrast $1
+}  
+
