@@ -12,6 +12,8 @@
 
 [ -d ./Downloads ] && cd ./Downloads
 
+eval $(thefuck --alias)
+
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
