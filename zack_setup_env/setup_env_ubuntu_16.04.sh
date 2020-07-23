@@ -34,7 +34,7 @@ curl -sfL https://git.io/chezmoi | sh
 
 # dotfiles
 ~/bin/chezmoi init https://github.com/Zackhardtoname/dotfiles.git
-~/bin/chezmoi apply
+~/bin/chezmoi update 
 
 # vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
