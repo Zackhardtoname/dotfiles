@@ -6,6 +6,34 @@
 # hstr
 sudo add-apt-repository ppa:ultradvorka/ppa && sudo apt-get update && sudo apt-get install hstr && hstr --show-configuration >> ~/.bashrc && . ~/.bashrc
 
+# chezmoi
+curl -sfL https://git.io/chezmoi | sh
+
+# dotfiles
+~/bin/chezmoi init https://github.com/Zackhardtoname/dotfiles.git
+~/bin/chezmoi update 
+
+# the fuck
+sudo apt update
+sudo apt install python3-dev python3-pip python3-setuptools
+sudo pip3 install thefuck
+
+# nvim
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt-get update
+sudo apt-get install neovim
+
+# vim-plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+nvim +PlugInstall +qall
+
+# vim providers 
+sudo apt-get update -y
+sudo apt-get install -y xclip
+python3 -m pip install --user --upgrade pynvim
+
 # zsh 
 sudo apt update
 sudo apt upgrade
@@ -22,22 +50,4 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 # zsh gruvbox theme
 curl -L https://raw.githubusercontent.com/sbugzu/gruvbox-zsh/master/gruvbox.zsh-theme > ~/.oh-my-zsh/custom/themes/gruvbox.zsh-theme
-
-# nvim
-sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:neovim-ppa/stable
-sudo apt-get update
-sudo apt-get install neovim
-
-# chezmoi
-curl -sfL https://git.io/chezmoi | sh
-
-# dotfiles
-~/bin/chezmoi init https://github.com/Zackhardtoname/dotfiles.git
-~/bin/chezmoi update 
-
-# vim-plug
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-nvim +PlugInstall +qall
 
