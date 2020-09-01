@@ -310,6 +310,7 @@ exec --no-startup-id discord
 
 # rid urgent color from started apps
 exec --no-startup-id ~/.i3/rid_urgent_color.sh # 2> /home/zack/Downloads/error.txt&
+exec --no-startup-id ~/.i3/change_monitor_layout.sh
 # Color palette used for the terminal ( ~/.Xresources file )
 #
 # Colors are gathered based on the documentation:
