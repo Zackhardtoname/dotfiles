@@ -311,6 +311,8 @@ exec --no-startup-id discord
 # rid urgent color from started apps
 exec --no-startup-id ~/.i3/rid_urgent_color.sh # 2> /home/zack/Downloads/error.txt&
 exec --no-startup-id ~/.i3/change_monitor_layout.sh
+# the above command conflicts with this: workspace "2:2:" output DP-2 
+
 # Color palette used for the terminal ( ~/.Xresources file )
 #
 # Colors are gathered based on the documentation:
@@ -468,3 +470,4 @@ bindsym mod1+a exec flameshot gui
 # move focused workspace between monitors
 bindsym $mod+Ctrl+greater move workspace to output right
 bindsym $mod+Ctrl+less move workspace to output left
+
