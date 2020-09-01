@@ -1,0 +1,2 @@
+autorandr --change
+
