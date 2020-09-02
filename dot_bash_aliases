@@ -9,7 +9,6 @@ alias res="pkill --oldest chrome; sleep 1; sudo reboot"
 alias m='/opt/msigd/msigd'
 alias o='xdg-open'
 alias ok='fuck'
-alias t='v ~/Dropbox\ \(University\ of\ Michigan\)/Assignment/todos_tex/todos.tex'
 alias v="nvim"
 
 # Ubuntu
