@@ -1,6 +1,7 @@
 # Common
 alias a="autorandr --change"
 alias c="~/bin/chezmoi"
+alias f="find -type d,f -name"
 alias k="mkdir"
 alias la='ls -A'
 alias l='ls -CF'
