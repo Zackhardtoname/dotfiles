@@ -688,6 +688,19 @@ $0
 \end{document}
 endsnippet
 
+snippet preamble "template"
+\makeatletter
+\def\input@path{{/home/zack/Dropbox/Assignment/templates/}}
+\makeatother
+
+\input{preamble.tex}
+
+\date{`date +%F`}
+\title{$2}
+\begin{document}
+$0
+\end{document}
+endsnippet
 snippet starthw "Start Homework"
 \documentclass[class=scrartcl, crop=false]{standalone}
 
