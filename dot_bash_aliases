@@ -2,7 +2,7 @@
 alias a="autorandr --change"
 alias c="~/bin/chezmoi"
 alias f="find -type d,f -name"
-alias k="mkdir"
+alias k="mkdir tex && cd tex && v"
 alias la='ls -A'
 alias l='ls -CF'
 alias ll='ls -alF'
