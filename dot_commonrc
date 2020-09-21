@@ -20,6 +20,10 @@ function b {
   m --brightness $1 --contrast $1
 }  
 
+function k {
+  mkdir tex && cd tex && v "$1.tex"
+}  
+
 eval $(thefuck --alias)
 
 export VISUAL=nvim
