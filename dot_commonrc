@@ -20,6 +20,16 @@ function b {
   m --brightness $1 --contrast $1
 }  
 
+function mb {
+  base_cmd="m --low_blue_light"
+  option="on"
+  if [[ $(m -f low_blue_light | awk '{print $NF}') = "on" ]]; then
+    option="off"
+  fi
+
+  eval "$base_cmd $option"
+}
+
 function k {
   mkdir tex && cd tex && v "$1.tex"
 }  
