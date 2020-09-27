@@ -1,21 +1,24 @@
 global !p
-texMathZones = ['texMathZone' + x for x in ['A', 'AS', 'B', 'BS', 'C', 'CS', 'D', 'DS', 'E', 'ES', 'F', 'FS', 'G', 'GS', 'H', 'HS', 'I', 'IS', 'J', 'JS', 'K', 'KS', 'L', 'LS', 'DS', 'V', 'W', 'X', 'Y', 'Z', 'AmsA', 'AmsB', 'AmsC', 'AmsD', 'AmsE', 'AmsF', 'AmsG', 'AmsAS', 'AmsBS', 'AmsCS', 'AmsDS', 'AmsES', 'AmsFS', 'AmsGS' ]]
-
-texIgnoreMathZones = ['texMathText']
-
-texMathZoneIds = vim.eval('map('+str(texMathZones)+", 'hlID(v:val)')")
-texIgnoreMathZoneIds = vim.eval('map('+str(texIgnoreMathZones)+", 'hlID(v:val)')")
-
-ignore = texIgnoreMathZoneIds[0]
-
-def math():
-	synstackids = vim.eval("synstack(line('.'), col('.') - (col('.')>=2 ? 1 : 0))")
-	try:
-		first = next(i for i in reversed(synstackids) if i in texIgnoreMathZoneIds or i in texMathZoneIds)
-		return first != ignore
-	except StopIteration:
-		return False
+from pythonutil import *
 endglobal
+
+post_jump "generate_matrix('b', snip)"
+context "math()"
+snippet "bmat\(([1-9]{1,2}[a-zA-Z]{0,2})\)" "bmat" irw
+`!p
+if not snip.c:
+	snip.rv = match.group(1)
+`
+endsnippet
+
+post_jump "generate_matrix('p', snip)"
+context "math()"
+snippet "pmat\(([1-9]{1,2}[a-zA-Z]{0,2})\)" "pmat" irw
+`!p
+if not snip.c:
+	snip.rv = match.group(1)
+`
+endsnippet
 
 snippet beg "begin{} / end{}" bA
 \\begin{$1}
@@ -202,13 +205,13 @@ snippet floor "floor" iA
 \left\lfloor $1 \right\rfloor$0
 endsnippet
 
-snippet pmat "pmat" iA
-\begin{pmatrix} $1 \end{pmatrix} $0
-endsnippet
+# snippet pmat "pmat" iA
+# \begin{pmatrix} $1 \end{pmatrix} $0
+# endsnippet
 
-snippet bmat "bmat" iA
-\begin{bmatrix} $1 \end{bmatrix} $0
-endsnippet
+# snippet bmat "bmat" iA
+# \begin{bmatrix} $1 \end{bmatrix} $0
+# endsnippet
 
 context "math()"
 snippet () "left( right)" i
@@ -700,10 +703,6 @@ endsnippet
 snippet nlp "New Line Align"
 \\\\
 \Leftrightarrow $0
-endsnippet
-
-snippet ra "right arrow"
-\rightarrow $0
 endsnippet
 
 snippet \ "4 slashes" i
