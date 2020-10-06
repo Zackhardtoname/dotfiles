@@ -469,3 +469,5 @@ bindsym $mod+t exec --no-startup-id typora /home/zack/Dropbox/TODOs.md
 bindsym $mod+Ctrl+greater move workspace to output right
 bindsym $mod+Ctrl+less move workspace to output left
 
+focus_on_window_activation focus
+
