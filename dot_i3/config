@@ -372,7 +372,9 @@ tray_output DP-2
 }
 
 # hide/unhide i3status bar
-bindsym $mod+m bar mode toggle
+# bindsym $mod+m bar mode toggle
+
+bindsym $mod+m exec --no-startup-id ~/.i3/i3_screen_swap.sh
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
