@@ -4,8 +4,7 @@ sudo pacman -S wget
 wget https://linux.dropbox.com/fedora/rpm-public-key.asc
 gpg --import rpm-public-key.asc
 yay -S dropbox
-# sync files through Dropbox now
-ln -s ~/Dropbox\ \(University\ of\ Michigan\) Dropbox
+ld sync files through Dropbox now
 
 yay -S hstr-git
 sudo pacman -S chezmoi
@@ -37,3 +36,19 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 curl -L https://raw.githubusercontent.com/sbugzu/gruvbox-zsh/master/gruvbox.zsh-theme > ~/.oh-my-zsh/custom/themes/gruvbox.zsh-theme
 
 # set up git ssh
+
+# Chinese font
+yay -S noto-fonts-sc
+
+# i3
+sudo pacman -S ttf-font-awesome
+yay -S i3-agenda-git
+sudo pacman -S rofi
+# clone i3 scripts
+mkdir /home/zack/.config/i3blocks/scripts
+git clone https://github.com/vivien/i3blocks-contrib /home/zack/.config/i3blocks/scripts
+
+# remember to log out to see things like icons properly
+
+# Google accounts & Chrome extension logins
+
