@@ -9,6 +9,8 @@ ld sync files through Dropbox now
 yay -S hstr-git
 sudo pacman -S chezmoi
 chezmoi init https://github.com/Zackhardtoname/dotfiles.git
+# or install github cli and then: chezmoi cd && gh repo clone dotfiles
+
 chezmoi update 
 sudo pacman -S thefuck
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
