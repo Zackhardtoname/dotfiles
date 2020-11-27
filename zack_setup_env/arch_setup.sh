@@ -1,4 +1,6 @@
 sudo pacman -S wget
+
+# Dropbox
 wget https://linux.dropbox.com/fedora/rpm-public-key.asc
 gpg --import rpm-public-key.asc
 yay -S dropbox
