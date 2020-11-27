@@ -48,7 +48,14 @@ sudo pacman -S rofi
 mkdir /home/zack/.config/i3blocks/scripts
 git clone https://github.com/vivien/i3blocks-contrib /home/zack/.config/i3blocks/scripts
 
+# pick rofi theme: rofi-theme-selector
+
 # remember to log out to see things like icons properly
 
 # Google accounts & Chrome extension logins
+
+sudo pacman -Syu htop
+
+yay -S pycharm-professional
+# idealvim, tabnine, .ignore, gruvbox, 
 
