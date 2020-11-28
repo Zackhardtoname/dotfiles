@@ -55,7 +55,12 @@ git clone https://github.com/vivien/i3blocks-contrib /home/zack/.config/i3blocks
 # Google accounts & Chrome extension logins
 
 sudo pacman -Syu htop
-
+yay -S slack-electron
 yay -S pycharm-professional
 # idealvim, tabnine, .ignore, gruvbox, 
 
+yay -S masterpdfeditor
+# install pdfstudio products and add their entries to rofi
+
+# WIne
+# snipaste, wechat
