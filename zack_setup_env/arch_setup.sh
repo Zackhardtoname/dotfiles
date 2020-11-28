@@ -62,5 +62,12 @@ yay -S pycharm-professional
 yay -S masterpdfeditor
 # install pdfstudio products and add their entries to rofi
 
-# WIne
-# snipaste, wechat
+# Wine
+# snipaste
+
+# wechat
+# include multilib
+yay -S deepin-wine-wechat
+sudo pacman -Ss wqy-microhei
+install through start menu
+env WINEPREFIX="$HOME/.deepinwine/Deepin-WeChat" winecfg # change graphics dpi to 192
