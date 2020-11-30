@@ -73,3 +73,8 @@ install through start menu
 env WINEPREFIX="$HOME/.deepinwine/Deepin-WeChat" winecfg # change graphics dpi to 192
 
 # msigd
+
+sudo pacman -S neofetch
+yay -S typora 
+
+yay -S update-grub
