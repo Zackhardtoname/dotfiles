@@ -220,7 +220,7 @@ for_window [class="Xfburn"] floating enable
 # for_window [class="Pamac-manager"] floating enable
 
 for_window [class="flameshot"] floating enable
-
+for_window [class="copyq"] floating enable
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
@@ -231,7 +231,10 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+#
+# using plasma's logout screen instead of i3's
+bindsym $mod+Shift+e exec --no-startup-id qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
 
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
@@ -350,8 +353,8 @@ bar {
 	position bottom
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-tray_output DP-2
+tray_output primary
+# tray_output DP-2
 
 	bindsym button4 nop
 	bindsym button5 nop
