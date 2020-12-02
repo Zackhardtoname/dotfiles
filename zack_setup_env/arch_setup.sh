@@ -78,3 +78,5 @@ sudo pacman -S neofetch
 yay -S typora 
 
 yay -S update-grub
+sudo pacman -S packagekit-qt5
+
