@@ -34,7 +34,8 @@ function k {
   mkdir tex && cd tex && v "$1.tex"
 }  
 
-eval $(thefuck --alias)
+if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+  eval $(thefuck --alias)
 
 export VISUAL=nvim
 export EDITOR="$VISUAL"
