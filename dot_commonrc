@@ -34,7 +34,7 @@ function k {
   mkdir tex && cd tex && v "$1.tex"
 }  
 
-if [ "$(expr substr $(uname -s) 1 5)" != "Darwin" ]; then
+if [ "$OSTYPE" != "win*)" ]; then
   eval $(thefuck --alias)
 fi
 
