@@ -34,9 +34,16 @@ function k {
   mkdir tex && cd tex && v "$1.tex"
 }  
 
-if [ "$OSTYPE" != "win*)" ]; then
-  eval $(thefuck --alias)
-fi
+case "$(uname -s)" in
+  Darwin | Linux)
+  # mac or linux
+    eval $(thefuck --alias)
+    ;;
+  CYGWIN*|MINGW32*|MSYS*|MINGW*)
+    ;;
+  *)
+    ;;
+esac
 
 export VISUAL=nvim
 export EDITOR="$VISUAL"
