@@ -1,0 +1,6 @@
+KDE settings
+scaling
+theme
+(time)
+static ip address
+system sound
