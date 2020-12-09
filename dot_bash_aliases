@@ -1,6 +1,6 @@
 # Common
 alias a="autorandr --change"
-alias c="~/bin/chezmoi"
+alias c="chezmoi"
 alias f="find -type d,f -name"
 alias k="mkdir tex && cd tex && v"
 alias la='ls -A'
