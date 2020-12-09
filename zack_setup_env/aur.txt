@@ -1,0 +1,17 @@
+deepin-wine-wechat
+dropbox
+electronic-wechat
+google-chrome
+hstr-git
+i3-agenda-git
+masterpdfeditor
+noto-fonts-sc
+p3x-onenote
+pycharm-professional
+rescuetime2
+slack-electron
+timeshift
+typora
+update-grub
+yay-git
+zoom
