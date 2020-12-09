@@ -4,7 +4,8 @@ sudo pacman -S wget
 wget https://linux.dropbox.com/fedora/rpm-public-key.asc
 gpg --import rpm-public-key.asc
 yay -S dropbox
-ld sync files through Dropbox now
+ln -s ~/Dropbox\ \(University\ of\ Michigan\) Dropbox
+# could now sync files through Dropbox now
 
 yay -S hstr-git
 sudo pacman -S chezmoi
