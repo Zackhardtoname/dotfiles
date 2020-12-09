@@ -89,4 +89,5 @@ pip install numpy
 # clone the repo
 sudo pacman -S libusb hidapi
 make TARGETOS=arch
-
+cd ..
+sudo mv msigd /opt
