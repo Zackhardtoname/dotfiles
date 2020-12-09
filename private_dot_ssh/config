@@ -1,0 +1,23 @@
+AddKeysToAgent yes
+
+Host caen login.engin.umich.edu
+        HostName login.engin.umich.edu
+        User zacklt
+        ControlMaster auto
+        ControlPath ~/.ssh/_%r@%h:%p
+        ControlPersist 43200
+
+Host lake greatlakes.arc-ts.umich.edu
+        HostName greatlakes.arc-ts.umich.edu
+        User zacklt
+        ControlMaster auto
+        ControlPath ~/.ssh/_%r@%h:%p
+        ControlPersist 43200
+
+Host file greatlakes-xfer.arc-ts.umich.edu
+        HostName greatlakes-xfer.arc-ts.umich.edu
+        User zacklt
+        ControlMaster auto
+        ControlPath ~/.ssh/_%r@%h:%p
+        ControlPersist 43200
+
