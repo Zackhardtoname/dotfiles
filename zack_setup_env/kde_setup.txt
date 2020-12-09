@@ -1,5 +1,6 @@
 KDE settings
 scaling
+taskbar height/scale
 theme
 (time)
 static ip address
