@@ -81,3 +81,7 @@ yay -S typora
 yay -S update-grub
 sudo pacman -S packagekit-qt5
 
+# swap screen
+pacman -Syu jq
+pip install numpy
+
