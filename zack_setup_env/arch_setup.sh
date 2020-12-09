@@ -85,3 +85,8 @@ sudo pacman -S packagekit-qt5
 pacman -Syu jq
 pip install numpy
 
+# msigd
+# clone the repo
+sudo pacman -S libusb hidapi
+make TARGETOS=arch
+
