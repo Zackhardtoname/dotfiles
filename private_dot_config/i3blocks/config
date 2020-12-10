@@ -30,7 +30,7 @@ separator_block_width=15
 markup=none
 
 [i3-agenda]
-command=i3-agenda -c ~/.google_credentials.json -ttl 60
+command=i3-agenda -c ~/Dropbox/else/WEB/.google_credentials.json -ttl 60
 interval=20
 
 # Date Time
