@@ -48,6 +48,7 @@ sudo pacman -S rofi
 # clone i3 scripts
 mkdir /home/zack/.config/i3blocks/scripts
 git clone https://github.com/vivien/i3blocks-contrib /home/zack/.config/i3blocks/scripts
+pip install i3-agenda
 
 # pick rofi theme: rofi-theme-selector
 
