@@ -362,9 +362,9 @@ tray_output none
 	bindsym button5 nop
 #   font xft:URWGothic-Book 11
 	strip_workspace_numbers yes
-
+ 
     colors {
-        background #222D31
+        background #31363b
         statusline #F9FAF9
         separator  #454947
 
