@@ -1,5 +1,12 @@
 AddKeysToAgent yes
 
+Host everything 159.65.174.103
+        HostName 159.65.174.103
+        User zack
+        ControlMaster auto
+        ControlPath ~/.ssh/_%r@%h:%p
+        ControlPersist 43200
+
 Host caen login.engin.umich.edu
         HostName login.engin.umich.edu
         User zacklt
