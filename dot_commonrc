@@ -20,6 +20,10 @@ function b {
   m --brightness $1 --contrast $1
 }  
 
+function x {
+  xrandr --output DP-2 --brightness $1
+}
+
 function mb {
   base_cmd="m --low_blue_light"
   option="on"
