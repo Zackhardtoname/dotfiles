@@ -19,6 +19,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 nvim +PlugInstall +qall
 sudo pacman -S xclip
+sudo pacman -S screen
 sudo pacman -S python-pip
 python3 -m pip install --user --upgrade pynvim
 
