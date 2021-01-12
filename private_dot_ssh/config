@@ -6,6 +6,14 @@ Host everything 159.65.174.103
         ControlMaster auto
         ControlPath ~/.ssh/_%r@%h:%p
         ControlPersist 43200
+        IdentityFile ~/.ssh/everything
+
+Host studytogether 95.179.130.39
+        HostName 95.179.130.39
+        User root
+        ControlMaster auto
+        ControlPath ~/.ssh/_%r@%h:%p
+        ControlPersist 43200
 
 Host caen login.engin.umich.edu
         HostName login.engin.umich.edu
