@@ -1,4 +1,14 @@
 call plug#begin('~/.vim/plugged')
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+let g:deoplete#enable_at_startup = 1
+
 Plug 'tpope/vim-surround'
 
 Plug 'frazrepo/vim-rainbow'
@@ -186,3 +196,21 @@ endfor
 
 " Kill the capslock when leaving insert mode.
 autocmd InsertLeave * set iminsert=0
+
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+     execute "set rtp+=" . g:opamshare . "/merlin/vim"
+autocmd FileType ocaml execute "set rtp+=" . substitute(system('opam config var share'), '\n$', '', '''') . "/ocp-indent/vim/indent/ocaml.vim"
+
+" filetype plugin on
+" set omnifunc=syntaxcomplete#Complete
+"
+" if !exists('g:deoplete#custom#var()')
+"   let g:deoplete#omni#input_patterns = {}
+" endif
+" let g:deoplete#omni#input_patterns.ocaml = '[^. *\t]\.\w*|\s\w*|#'
+
+if !exists('g:deoplete#omni_patterns')
+  call deoplete#custom#var('omni', 'input_patterns', {})
+endif
+call deoplete#custom#var('omni', 'input_patterns', {'ocaml': ['[^. *\t]\.\w*|\s\w*|#']})
+
