@@ -293,6 +293,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
+exec --no-startup-id redshift
 exec --no-startup-id eval `ssh-agent`
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
@@ -305,9 +306,8 @@ exec /usr/bin/fcitx5
 exec xrandr --dpi 192
 # exec --no-startup-id polybar -r -c ~/.config/polybar/config example &
 
-exec --no-startup-id google-chrome-stable 
 exec --no-startup-id dropbox
-exec --no-startup-id obs --startvirtualcam
+exec --no-startup-id sudo -E obs --startvirtualcam
 exec --no-startup-id barrier
 exec --no-startup-id albert 
 exec --no-startup-id rescuetime 
@@ -315,6 +315,7 @@ exec --no-startup-id dolphin
 # disable spotify as it always moves me there after logging in
 # exec --no-startup-id spotify
 exec --no-startup-id discord
+exec --no-startup-id google-chrome-stable 
 
 # rid urgent color from started apps
 exec --no-startup-id ~/.i3/rid_urgent_color.sh # 2> /home/zack/Downloads/error.txt&
@@ -475,7 +476,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 ##################################################
 # Personal
-bindsym $mod+Shift+p exec systemctl reboot
+bindsym $mod+Shift+p exec pkill --oldest chrome; sleep 3; systemctl reboot
 bindsym mod1+a exec flameshot gui
 bindsym $mod+t exec --no-startup-id typora /home/zack/Dropbox/TODOs.md
 
