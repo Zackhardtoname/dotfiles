@@ -62,6 +62,7 @@ yay -S slack-electron
 yay -S pycharm-professional
 # idealvim, tabnine, .ignore, gruvbox, 
 
+sudo pacman -S smplayer
 yay -S masterpdfeditor
 # install pdfstudio products and add their entries to rofi
 
