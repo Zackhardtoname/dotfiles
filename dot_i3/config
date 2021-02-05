@@ -59,7 +59,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec google-chrome-stable 
+bindsym $mod+c exec google-chrome-stable
 bindsym $mod+F3 exec dolphin
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec dolphin_pkexec
@@ -150,6 +150,16 @@ set $ws5 5
 set $ws6 6
 set $ws7 7:7:🎞️
 set $ws8 8:8:💬
+
+workspace $ws3 output USB-C-0
+workspace $ws7 output USB-C-0
+workspace $ws8 output USB-C-0
+
+workspace $ws1 output primary
+workspace $ws2 output primary
+workspace $ws4 output primary
+workspace $ws5 output primary
+workspace $ws6 output primary
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -287,8 +297,7 @@ mode "resize" {
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id QT_SCREEN_SCALE_FACTORS='' flameshot & 
-exec --no-startup-id nitrogen --restore; sleep 1; # compton -b
-#exec --no-startup-id manjaro-hello
+exec --no-startup-id nitrogen --restore; # sleep 1; # compton -b
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
@@ -303,27 +312,29 @@ exec --no-startup-id eval `ssh-agent`
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec /usr/bin/fcitx5
+# set correct screen wallpaper (that kicks in before nitrogen)
 exec xrandr --dpi 192
 # exec --no-startup-id polybar -r -c ~/.config/polybar/config example &
 
-exec dropbox
+exec --no-startup-id dropbox
 exec --no-startup-id barrier
 exec --no-startup-id albert 
 exec --no-startup-id rescuetime 
 exec --no-startup-id dolphin
-exec --no-startup-id sudo -E obs --startvirtualcam
+exec --no-startup-id obs --startvirtualcam
 exec --no-startup-id discord
-exec --no-startup-id i3-msg $ws1; exec google-chrome-stable; 
-# chrome is always out of shape and can't find a way to fix it
+# chrome is always out of shape and can't find a good way to fix it
+exec "sh -c 'sleep 3; i3-resurrect restore -w 1:1:🌐'"
+# exec --no-startup-id i3-msg 'workspace 1:1:🌐; exec google-chrome-stable;'
 # exec pkill -f chrome; exec google-chrome-stable;
 
 # disable spotify as it always moves me there after logging in
 # exec --no-startup-id spotify
 
 # rid urgent color from started apps
-exec --no-startup-id ~/.i3/rid_urgent_color.sh # 2> /home/zack/Downloads/error.txt&
-exec --no-startup-id ~/.i3/change_monitor_layout.sh
+# exec --no-startup-id ~/.i3/change_monitor_layout.sh
 # the above command conflicts with this: workspace "2:2:" output DP-2 
+exec --no-startup-id ~/.i3/rid_urgent_color.sh # 2> /home/zack/Downloads/error.txt&
 
 # Color palette used for the terminal ( ~/.Xresources file )
 #
