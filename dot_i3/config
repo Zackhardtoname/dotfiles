@@ -142,14 +142,14 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1:1:
-set $ws2 2:2:
-set $ws3 3:3:
-set $ws4 4:4:
+set $ws1 1:1:🌐
+set $ws2 2:2:📗
+set $ws3 3:3:📂
+set $ws4 4:4:🧮
 set $ws5 5
 set $ws6 6
-set $ws7 7:7:
-set $ws8 8:8:
+set $ws7 7:7:🎞️
+set $ws8 8:8:💬
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -187,6 +187,7 @@ assign [class="dolphin"] $ws3
 assign [class="jetbrains-pycharm"] $ws4
 # assign [class="Spotify"] $ws7
 for_window [class="Spotify"] move to workspace $ws7
+assign [class="obs"] $ws7
 #, workspace --no-auto-back-and-forth $ws7
 assign [class="discord"] $ws8
 
@@ -222,6 +223,7 @@ for_window [class="Xfburn"] floating enable
 for_window [class="flameshot"] floating enable
 for_window [class="copyq"] floating enable
 for_window [class="VirtualBox Manager"] floating disable
+for_window [class="zoom"] floating enable
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
@@ -303,11 +305,12 @@ exec /usr/bin/fcitx5
 exec xrandr --dpi 192
 # exec --no-startup-id polybar -r -c ~/.config/polybar/config example &
 
-exec dropbox
+exec --no-startup-id google-chrome-stable 
+exec --no-startup-id dropbox
+exec --no-startup-id obs --startvirtualcam
 exec --no-startup-id barrier
 exec --no-startup-id albert 
 exec --no-startup-id rescuetime 
-exec --no-startup-id google-chrome-stable 
 exec --no-startup-id dolphin
 # disable spotify as it always moves me there after logging in
 # exec --no-startup-id spotify
