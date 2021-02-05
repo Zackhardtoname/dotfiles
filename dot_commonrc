@@ -10,6 +10,25 @@
 
 [ -d ./Downloads ] && cd ./Downloads
 
+function cd() {
+  builtin cd "$@"
+
+  if [[ -z "$VIRTUAL_ENV" ]] ; then
+    ## If env folder is found then activate the vitualenv
+      if [[ -d ./.venv ]] ; then
+        source ./.venv/bin/activate
+      fi
+  else
+    ## check the current folder belong to earlier VIRTUAL_ENV folder
+    # if yes then do nothing
+    # else deactivate
+      parentdir="$(dirname "$VIRTUAL_ENV")"
+      if [[ "$PWD"/ != "$parentdir"/* ]] ; then
+        deactivate
+      fi
+  fi
+}
+
 function bm { 
   ENTRY=$(grep "$1" $HOME/.config/gtk-3.0/bookmarks) 
   DIR=$(echo "$ENTRY" | sed 's|file://||g' | cut -d' ' -f1)
@@ -52,3 +71,5 @@ esac
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
+# opam configuration
+test -r /home/zack/.opam/opam-init/init.zsh && . /home/zack/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
