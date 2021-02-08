@@ -302,7 +302,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
-exec --no-startup-id redshift
+# exec --no-startup-id redshift
 exec --no-startup-id eval `ssh-agent`
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
@@ -318,7 +318,6 @@ exec xrandr --dpi 192
 
 exec --no-startup-id dropbox
 exec --no-startup-id barrier
-exec --no-startup-id albert 
 exec --no-startup-id rescuetime 
 exec --no-startup-id dolphin
 exec --no-startup-id obs --startvirtualcam
@@ -327,6 +326,7 @@ exec --no-startup-id discord
 exec "sh -c 'sleep 3; i3-resurrect restore -w 1:1:🌐'"
 # exec --no-startup-id i3-msg 'workspace 1:1:🌐; exec google-chrome-stable;'
 # exec pkill -f chrome; exec google-chrome-stable;
+# exec --no-startup-id albert // built-in autostart
 
 # disable spotify as it always moves me there after logging in
 # exec --no-startup-id spotify
