@@ -10,6 +10,11 @@
 
 [ -d ./Downloads ] && cd ./Downloads
 
+
+function s {
+  pdfgrep -i -H -n -r $1
+}  
+
 function cd() {
   builtin cd "$@"
 
