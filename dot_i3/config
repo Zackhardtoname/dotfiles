@@ -134,10 +134,6 @@ bindsym $mod+Shift+minus move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show
 
-#navigate workspaces next / previous
-bindsym $mod+Ctrl+Right workspace next
-bindsym $mod+Ctrl+Left workspace prev
-
 # Workspace names
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
@@ -190,6 +186,10 @@ bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+
+# Move to a new empty workspace
+bindsym $mod+Ctrl+Left exec --no-startup-id ~/.i3/i3empty.py prev 11 -m
+bindsym $mod+Ctrl+Right exec --no-startup-id ~/.i3/i3empty.py next 11 -m
 
 # Open applications on specific workspaces
 # assign [class="Google-chrome"] $ws1
@@ -515,3 +515,4 @@ for_window [class="(?i)*nextcloud*"] floating disable
 # for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px
 for_window [class="plasmashell" window_type="notification"] floating enable, border none move position 4150 20
 no_focus [class="plasmashell" window_type="notification"] 
+
