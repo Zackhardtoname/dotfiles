@@ -103,8 +103,8 @@ bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
-bindsym $mod+Shift+v split h;exec notify-send 'tile horizontally'
-bindsym $mod+v split v;exec notify-send 'tile vertically'
+# bindsym $mod+Shift+v split h;exec notify-send 'tile horizontally'
+# bindsym $mod+v split v;exec notify-send 'tile vertically'
 bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
@@ -129,18 +129,18 @@ bindsym $mod+a focus parent
 
 # move the currently focused window to the scratchpad
 bindsym $mod+minus move scratchpad
-
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+plus exec --no-startup-id ~/.i3/select-scratchpad.rb --title "dropdown_konsole" --not
-bindsym $mod+u exec --no-startup-id ~/.i3/select-scratchpad.rb --title "dropdown_konsole"
+bindsym $mod+plus scratchpad show floating toggle
 
-for_window [title="dropdown_konsole"] \
-  floating enable, \
-  border pixel 5, \
-  resize set 1600 800, \
-  move scratchpad, \
-  move position center
+# bindsym $mod+u exec --no-startup-id ~/.i3/select-scratchpad.rb --title "dropdown_konsole"
+
+# for_window [title="dropdown_konsole"] \
+#   floating enable, \
+#   border pixel 5, \
+#   resize set 1600 800, \
+#   move scratchpad, \
+#   move position center
 
 # Workspace names
 # to display names or symbols instead of plain workspace numbers you can use
