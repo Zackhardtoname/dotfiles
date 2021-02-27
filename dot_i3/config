@@ -4,7 +4,6 @@
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 set $term konsole
-set $dropdown_term_name dropdown_konsole
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
@@ -129,17 +128,17 @@ bindsym $mod+Shift+s sticky toggle
 bindsym $mod+a focus parent
 
 # move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus ["^(?!Navigator$)"] scratchpad show floating toggle
-bindsym $mod+u [title="$dropdown_term_name"] scratchpad show
+bindsym $mod+Shift+minus scratchpad show floating toggle
+bindsym $mod+u [title="dropdown_konsole"] scratchpad show; move position center
 
-for_window [title="$dropdown_term_name"] \
-  floating enable, border none, \
-  resize set 100 ppt 50 ppt, \
-  move position 0 24, \
+for_window [title="dropdown_konsole"] \
+  floating enable, \
+  border pixel 5, \
+  resize set 1600 800, \
   move scratchpad
 
 # Workspace names
@@ -325,7 +324,7 @@ exec /usr/bin/fcitx5
 exec xrandr --dpi 192
 # exec --no-startup-id polybar -r -c ~/.config/polybar/config example &
 
-exec --no-startup-id $term -p 'LocalTabTitleFormat=$dropdown_term_name'
+exec --no-startup-id $term -p 'LocalTabTitleFormat=dropdown_konsole'
 exec --no-startup-id dropbox
 exec --no-startup-id barrier
 exec --no-startup-id rescuetime 
