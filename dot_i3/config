@@ -3,6 +3,8 @@
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
+set $term konsole
+set $dropdown_term_name dropdown_konsole
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
@@ -14,11 +16,6 @@ default_floating_border normal
 # Hide borders
 hide_edge_borders none
 
-# change borders
-bindsym $mod+u border none
-bindsym $mod+y border pixel 1
-bindsym $mod+n border normal
-
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace Hack 11 Font Awesome 11
@@ -27,9 +24,13 @@ font pango:monospace Hack 11 Font Awesome 11
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
+# bindsym $mod+u border none
+bindsym $mod+y border pixel 1
+bindsym $mod+n border normal
+
 # start a terminal
 # bindsym $mod+Return exec gnome-terminal
-bindsym $mod+Return exec konsole
+bindsym $mod+Return exec $term
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -132,7 +133,14 @@ bindsym $mod+Shift+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
+bindsym $mod+minus ["^(?!Navigator$)"] scratchpad show floating toggle
+bindsym $mod+u [title="$dropdown_term_name"] scratchpad show
+
+for_window [title="$dropdown_term_name"] \
+  floating enable, border none, \
+  resize set 100 ppt 50 ppt, \
+  move position 0 24, \
+  move scratchpad
 
 # Workspace names
 # to display names or symbols instead of plain workspace numbers you can use
@@ -317,6 +325,7 @@ exec /usr/bin/fcitx5
 exec xrandr --dpi 192
 # exec --no-startup-id polybar -r -c ~/.config/polybar/config example &
 
+exec --no-startup-id $term -p 'LocalTabTitleFormat=$dropdown_term_name'
 exec --no-startup-id dropbox
 exec --no-startup-id barrier
 exec --no-startup-id rescuetime 
