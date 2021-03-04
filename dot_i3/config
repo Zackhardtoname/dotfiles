@@ -505,8 +505,12 @@ bindsym mod1+a exec flameshot gui
 bindsym $mod+t exec --no-startup-id typora /home/zack/Dropbox/TODOs.md
 
 # move focused workspace between monitors
-bindsym $mod+Ctrl+greater move workspace to output right
-bindsym $mod+Ctrl+less move workspace to output left
+bindsym $mod+Ctrl+k move workspace to output up
+bindsym $mod+Ctrl+j move workspace to output down
+bindsym $mod+Ctrl+h move workspace to output left
+bindsym $mod+Ctrl+l move workspace to output right
+# bindsym $mod+Ctrl+greater move workspace to output right
+# bindsym $mod+Ctrl+less move workspace to output left
 
 focus_on_window_activation focus
 
