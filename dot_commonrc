@@ -41,11 +41,20 @@ function bm {
 }
 
 function b {
-  m --brightness $1 --contrast $1
+  sudo ddcutil --display $1 setvcp $(( 10 + $2 )) $3
 }  
+
+# function b {
+#   m --brightness $1 --contrast $1
+# }  
 
 function x {
   xrandr --output DP-2 --brightness $1
+}
+
+function x2 {
+  ddcutil --display 2 setvcp 10 $1
+  ddcutil --display 2 setvcp 12 $1
 }
 
 function mb {
