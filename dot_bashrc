@@ -148,5 +148,6 @@ fi
 # if this is interactive shell, then bind 'kill last command' to Ctrl-x k
 # if [[ $- =~ .*i.* ]]; then bind '"\C-xk": "\C-a hstr -k \C-j"'; fi
 
- export PIPENV_VENV_IN_PROJECT="enabled"
+export PIPENV_VENV_IN_PROJECT="enabled"
+export study_together_mode="dev"
 
