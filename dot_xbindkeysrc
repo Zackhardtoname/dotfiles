@@ -67,11 +67,12 @@
 
 # My own
 # TODO figure out how to repeat while pressed
-"/usr/bin/xte 'key Page_Down'"
+"/usr/bin/xte 'key Page_Up'"
 b:2
 
-"/usr/bin/xte 'key Page_Up'"
+"/usr/bin/xte 'key Page_Down'"
 b:8
+
 ##################################
 # End of xbindkeys configuration #
 ##################################

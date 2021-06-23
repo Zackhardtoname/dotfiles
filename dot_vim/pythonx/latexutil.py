@@ -2,7 +2,7 @@ import re
 import vim
 
 def math():
-	return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+    return vim.eval('vimtex#syntax#in_mathzone()') == '1'
 def comment(): 
 	return vim.eval('vimtex#syntax#in_comment()') == '1'
 def env(name):

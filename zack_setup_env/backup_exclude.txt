@@ -51,4 +51,5 @@
 /var/cache/xbps/*
 /var/cache/zypp/*
 /var/cache/edb/*
+/home/*/.local/share/baloo/*
 
