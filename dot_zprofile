@@ -1,0 +1,4 @@
+echo zprofile
+
+[ -f ~/.common_profile ] && . ~/.common_profile
+
