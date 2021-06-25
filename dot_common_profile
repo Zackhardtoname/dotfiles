@@ -1,0 +1,27 @@
+# run every time you launch a login shell
+# here: environment variable
+
+# echo common_profile
+
+export HSTR_CONFIG=hicolor       # get more colors
+export HISTCONTROL=ignorespace   # leading space hides commands from history
+export HISTFILESIZE=10000        # increase history file size (default is 500)
+export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
+
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+
+export PIPENV_VENV_IN_PROJECT=enabled
+
+# Study Together
+export STUDY_TOGETHER_MODE=dev
+
+# Personal
+if [ -f ~/.credentials ]; then
+    . ~/.credentials
+fi
+
