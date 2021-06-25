@@ -1,3 +1,9 @@
+# run every time you launch a non-login shell
+# here: aliases, functions
+# individual rc: custom prompts, history customizations
+
+# echo commonrc
+
 [ -f ~/.fzf.bash ] && . ~/.fzf.bash
 
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
@@ -6,10 +12,33 @@
 
 [ -f ~/.zsh_aliases ] && . ~/.zsh_aliases
 
-[ -f ~/.credentials ] && . ~/.credentials
-
 [ -d ./Downloads ] && cd ./Downloads
 
+alias a="autorandr --change"
+alias c="chezmoi"
+alias f="find -type d,f -name"
+alias k="mkdir tex && cd tex && v"
+alias la='ls -A'
+alias l='ls -CF'
+alias ll='ls -alF'
+alias res="pkill --oldest chrome; sleep 1; sudo reboot"
+alias m='/opt/msigd/msigd'
+alias o='xdg-open'
+alias ok='fuck'
+alias v="nvim"
+
+# Ubuntu
+alias sapt="sudo apt"
+alias saptgi="sudo apt-get install "
+
+# Git
+alias acp="gaa; gc; gp"
+
+# Add an "alert" alias for long running commands.  Use like so: sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# HSTR
+alias hh=hstr                    # hh to be alias for hstr
 
 function s {
   pdfgrep -i -H -n -r $1
@@ -86,3 +115,4 @@ esac
 # ocaml 
 # opam configuration
 # test -r /home/zack/.opam/opam-init/init.zsh && . /home/zack/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+

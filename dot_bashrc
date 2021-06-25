@@ -1,6 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+# echo bashrc
 
 # If not running interactively, don't do anything
 case $- in
@@ -106,17 +107,11 @@ case $- in
     *) return;;
 esac
 
-# Your place for hosting Git repos. I use this for private repos.
-export GIT_HOSTING='git@git.domain.com'
-
 # Don't check mail when opening terminal.
 unset MAILCHECK
 
 # Change this to your console based IRC client of choice.
 export IRC_CLIENT='irssi'
-
-# Set this to the command you use for todo.txt-cli
-export TODO="t"
 
 # Set this to false to turn off version control status checking within the prompt for all themes
 export SCM_CHECK=true
@@ -139,14 +134,14 @@ export SCM_CHECK=true
 # https://github.com/djl/vcprompt
 #export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
 
-if [ -f ~/.commonrc ]; then
-    . ~/.commonrc
-fi
-
 # Hist - bash only parts
 # shopt -s histappend              # append new history items to .bash_history
 # if this is interactive shell, then bind hstr to Ctrl-r (for Vi mode check doc)
 # if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hstr -- \C-j"'; fi
 # if this is interactive shell, then bind 'kill last command' to Ctrl-x k
 # if [[ $- =~ .*i.* ]]; then bind '"\C-xk": "\C-a hstr -k \C-j"'; fi
+
+if [ -f ~/.commonrc ]; then
+    . ~/.commonrc
+fi
 
