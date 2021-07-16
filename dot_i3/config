@@ -327,7 +327,7 @@ exec xrandr --dpi 192
 # exec --no-startup-id polybar -r -c ~/.config/polybar/config example &
 
 # exec --no-startup-id $term -p 'LocalTabTitleFormat=dropdown_konsole'
-exec --no-startup-id dropbox
+# exec --no-startup-id dropbox
 exec --no-startup-id barrier
 exec --no-startup-id rescuetime 
 exec --no-startup-id dolphin
