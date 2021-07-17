@@ -6,13 +6,6 @@
 # hstr
 sudo add-apt-repository ppa:ultradvorka/ppa && sudo apt-get update && sudo apt-get install hstr && hstr --show-configuration >> ~/.bashrc && . ~/.bashrc
 
-# chezmoi
-curl -sfL https://git.io/chezmoi | sh
-
-# dotfiles
-~/bin/chezmoi init https://github.com/Zackhardtoname/dotfiles.git
-~/bin/chezmoi update 
-
 # the fuck
 sudo apt update
 sudo apt install python3-dev python3-pip python3-setuptools
@@ -48,6 +41,15 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # zsh-syntax-highlighting 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-# zsh gruvbox theme
-curl -L https://raw.githubusercontent.com/sbugzu/gruvbox-zsh/master/gruvbox.zsh-theme > ~/.oh-my-zsh/custom/themes/gruvbox.zsh-theme
+# zsh themes
+# curl -L https://raw.githubusercontent.com/sbugzu/gruvbox-zsh/master/gruvbox.zsh-theme > ~/.oh-my-zsh/custom/themes/gruvbox.zsh-theme
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+
+# chezmoi
+curl -sfL https://git.io/chezmoi | sh
+
+# dotfiles
+~/bin/chezmoi init https://github.com/Zackhardtoname/dotfiles.git
+~/bin/chezmoi update 
 
