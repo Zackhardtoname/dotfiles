@@ -1,4 +1,4 @@
-echo bash_profile
+# echo bash_profile
 
 if [ -f ~/.common_profile ]; then
     . ~/.common_profile
