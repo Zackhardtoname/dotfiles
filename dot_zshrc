@@ -110,9 +110,6 @@ if [ -f ~/.commonrc ]; then
     . ~/.commonrc
 fi
 
-export PATH=~/.npm-global/bin:$PATH
-export PATH=/opt:$PATH
-
 # From https://zsh.sourceforge.io/Intro/intro_3.html
 # There are five startup files that zsh will read commands from:
 # 
