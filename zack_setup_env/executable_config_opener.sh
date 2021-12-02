@@ -2,12 +2,12 @@
 # script to open config file to edit
 
 TERMINAL="konsole"
-EDITOR="vim"
+EDITOR="nvim"
 declare -A config
 
 # add config file names here
 config[vim]=~/.vimrc
-config[i3]=~/.config/i3/config
+config[i3]=~/.i3/config
 config[alacritty]=~/.config/alacritty/alacritty.yml
 config[picom]=~/.config/picom/picom.conf
 config[polybar]=~/.config/polybar/config
@@ -21,6 +21,8 @@ choice=$(printf "%s\n" "${!config[@]}" | sort | rofi -dmenu | cut -f 1)
 file=${config[$choice]}
 
 if [[ ! -z "$choice" ]] && [ -f "$file" ];
-    then $TERMINAL -e $EDITOR $file
+    then $EDITOR $file
+else
+    echo $file not found
 fi
 

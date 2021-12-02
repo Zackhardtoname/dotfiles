@@ -26,6 +26,7 @@ alias m='/opt/msigd/msigd'
 alias o='xdg-open'
 alias ok='fuck'
 alias v="nvim"
+alias co="~/zack_setup_env/config_opener.sh"
 
 # Ubuntu
 alias sapt="sudo apt"

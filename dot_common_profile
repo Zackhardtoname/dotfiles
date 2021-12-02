@@ -29,7 +29,7 @@ if [ -f ~/.credentials ]; then
     . ~/.credentials
 fi
 
-if [ -f ~/jest ]; then
-    . ~/jest
-fi
+# if [ -f ~/jest ]; then
+#     . ~/jest
+# fi
 
