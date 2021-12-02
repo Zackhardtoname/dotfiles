@@ -6,10 +6,10 @@ EDITOR="nvim"
 declare -A config
 
 # add config file names here
+config[rc]=~/.commonrc
+config[profile]=~/.common_profile
 config[vim]=~/.vimrc
 config[i3]=~/.i3/config
-config[alacritty]=~/.config/alacritty/alacritty.yml
-config[picom]=~/.config/picom/picom.conf
 config[polybar]=~/.config/polybar/config
 
 for c in "${!config[@]}"
@@ -22,6 +22,7 @@ file=${config[$choice]}
 
 if [[ ! -z "$choice" ]] && [ -f "$file" ];
     then $EDITOR $file
+    # then $TERMINAL -e $EDITOR $file
 else
     echo $file not found
 fi
