@@ -15,8 +15,8 @@ let g:deoplete#enable_at_startup = 1
 
 Plug 'tpope/vim-surround'
 
-Plug 'frazrepo/vim-rainbow'
-let g:rainbow_active=1
+Plug 'luochen1990/rainbow'
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
 Plug 'junegunn/goyo.vim'
 
@@ -51,6 +51,7 @@ let g:UltiSnipsListSnippets = '<s-tab>'
 
 Plug 'honza/vim-snippets'
 
+
 "Figure support
 inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
 nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
@@ -64,8 +65,8 @@ let g:auto_save = 0
 			
 Plug 'tpope/vim-unimpaired'
 
-" Plug 'kana/vim-textobj-user'
-" Plug 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-line'
 call plug#end()
 
 " editor
@@ -216,3 +217,4 @@ if !exists('g:deoplete#omni_patterns')
 endif
 call deoplete#custom#var('omni', 'input_patterns', {'ocaml': ['[^. *\t]\.\w*|\s\w*|#']})
 
+syntax on

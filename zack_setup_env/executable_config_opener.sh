@@ -8,6 +8,7 @@ declare -A config
 # add config file names here
 config[rc]=~/.commonrc
 config[profile]=~/.common_profile
+config[nvim]=~/.config/nvim/init.vim
 config[vim]=~/.vimrc
 config[i3]=~/.i3/config
 config[polybar]=~/.config/polybar/config

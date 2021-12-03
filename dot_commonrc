@@ -14,13 +14,16 @@
 
 [ -d ./Downloads ] && cd ./Downloads
 
-alias a="autorandr --change"
+# Override zsh's common-alias 
+alias l='ls -alhF'
+# alias la='ls -A'
+# alias l='ls -CF'
+# alias ll='ls -alF'
+# alias a="autorandr --change"
 alias c="chezmoi"
+alias b="bat"
 alias f="find -type d,f -name"
 alias k="mkdir tex && cd tex && v"
-alias la='ls -A'
-alias l='ls -CF'
-alias ll='ls -alF'
 alias res="pkill --oldest chrome; sleep 1; sudo reboot"
 alias m='/opt/msigd/msigd'
 alias o='xdg-open'
@@ -70,9 +73,9 @@ function bm {
   cd $DIR
 }
 
-function b {
-  sudo ddcutil --display $1 setvcp $(( 10 + $2 )) $3
-}  
+# function b {
+#   sudo ddcutil --display $1 setvcp $(( 10 + $2 )) $3
+# }  
 
 # function b {
 #   m --brightness $1 --contrast $1
