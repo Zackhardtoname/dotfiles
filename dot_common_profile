@@ -25,10 +25,10 @@ export IDEA_JDK=/usr/lib/jvm/jdk-jetbrains
 export STUDY_TOGETHER_MODE=dev
 
 # Personal
-if [ -f ~/.credentials ]; then
-    . ~/.credentials
-fi
-
+for FILE in ~/.credentials ~/.work_profile
+do
+  [ -f $FILE ] && . $FILE
+done
 # if [ -f ~/jest ]; then
 #     . ~/jest
 # fi

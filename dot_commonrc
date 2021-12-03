@@ -3,16 +3,11 @@
 # individual rc: custom prompts, history customizations
 
 # echo commonrc
-
-[ -f ~/.fzf.bash ] && . ~/.fzf.bash
-
-[ -f ~/.bash_aliases ] && . ~/.bash_aliases
-
-[ -f ~/.bash_docker ] && . ~/.bash_docker
-
-[ -f ~/.zsh_aliases ] && . ~/.zsh_aliases
-
-[ -d ./Downloads ] && cd ./Downloads
+DIR=~/Downloads; [ -d $DIR ] && cd $DIR
+for FILE in ~/.fzf.bash ~/.bash_aliases ~/.bash_docker ~/.zsh_aliases ~/.workrc
+do
+  [ -f $FILE ] && . $FILE
+done
 
 # Override zsh's common-alias 
 alias l='ls -alhF'
