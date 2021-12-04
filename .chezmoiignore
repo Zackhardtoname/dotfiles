@@ -1,5 +1,6 @@
 {{- if ne .mode "personal" }}
   .ssh/config
   .p10k.zsh
+  .config/chezmoi/chezmoi.toml
 {{- end }}
 
