@@ -3,7 +3,8 @@
 # individual rc: custom prompts, history customizations
 
 # echo commonrc
-DIR=~/Downloads; [ -d $DIR ] && cd $DIR
+DIR=./Downloads; [ -d $DIR ] && cd $DIR
+
 for FILE in ~/.fzf.bash ~/.bash_aliases ~/.bash_docker ~/.zsh_aliases ~/.workrc
 do
   [ -f $FILE ] && . $FILE
