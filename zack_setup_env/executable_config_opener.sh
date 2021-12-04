@@ -12,6 +12,8 @@ config[nvim]=~/.config/nvim/init.vim
 config[vim]=~/.vimrc
 config[i3]=~/.i3/config
 config[polybar]=~/.config/polybar/config
+config[git]=~/.gitconfig
+config[config_opener]=~/zack_setup_env/config_opener.sh
 
 for c in "${!config[@]}"
 do

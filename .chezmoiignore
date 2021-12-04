@@ -1,0 +1,5 @@
+{{- if ne .mode "personal" }}
+  ~/.ssh/config
+  ~/.p10k.zsh
+{{- end }}
+
