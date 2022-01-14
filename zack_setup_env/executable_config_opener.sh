@@ -2,7 +2,7 @@
 # script to open config file to edit
 
 TERMINAL="konsole"
-EDITOR="sudoedit"
+EDITOR="nvim"
 declare -A config
 
 # add config file names here
