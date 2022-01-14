@@ -6,7 +6,7 @@ export PATH=~/.npm-global/bin:$PATH
 export PATH=/opt:$PATH
 export PATH="$HOME/.local/bin:$PATH"
 
-export HSTR_CONFIG=hicolor       # get more colors
+export HSTR_CONFIG=hicolor,raw-history-view       # get more colors
 export HISTCONTROL=ignorespace   # leading space hides commands from history
 export HISTFILESIZE=10000        # increase history file size (default is 500)
 export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)

@@ -2,7 +2,7 @@
 # script to open config file to edit
 
 TERMINAL="konsole"
-EDITOR="nvim"
+EDITOR="sudoedit"
 declare -A config
 
 # add config file names here
@@ -14,6 +14,7 @@ config[i3]=~/.i3/config
 config[polybar]=~/.config/polybar/config
 config[git]=~/.gitconfig
 config[config_opener]=~/zack_setup_env/config_opener.sh
+config[pacman]=/etc/pacman.conf
 
 for c in "${!config[@]}"
 do
