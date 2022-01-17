@@ -139,7 +139,7 @@ label-urgent-padding = 2
 [module/agenda]
 type = custom/script
 ; Show the next event and forget cache automatically every 60 minutes
-exec = i3-agenda -c /home/zack/drive/else/Configs/google_calendar_credentials.json
+exec = i3-agenda -c /home/zack/drive/else/Configs/google_calendar_credentials.json -ttl 10 -o
 ; left click to launch Google Calendar
 click-left = xdg-open https://calendar.google.com/calendar/r/day
 ; right click force update the cache, if for example you just added a new event

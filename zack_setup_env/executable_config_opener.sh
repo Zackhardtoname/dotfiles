@@ -6,28 +6,31 @@ EDITOR="nvim"
 declare -A config
 
 # add config file names here
-config[rc]=~/.commonrc
+config[config_opener]=~/zack_setup_env/config_opener.sh
+config[git]=~/.gitconfig
+config[i3]=~/.i3/config
+config[i3blocks]=~/.config/i3blocks
+config[pacman]=/etc/pacman.conf
+config[polybar]=~/.config/polybar/config
 config[profile]=~/.common_profile
+config[rc]=~/.commonrc
 config[nvim]=~/.config/nvim/init.vim
 config[vim]=~/.vimrc
-config[i3]=~/.i3/config
-config[polybar]=~/.config/polybar/config
-config[git]=~/.gitconfig
-config[config_opener]=~/zack_setup_env/config_opener.sh
-config[pacman]=/etc/pacman.conf
 
 for c in "${!config[@]}"
 do
-    OPTIONS="${OPTIONS}\n${c}"
+  OPTIONS="${OPTIONS}\n${c}"
 done
 # choice=$(echo -e ${OPTIONS#"\n"} | sort | rofi -dmenu | cut -f 1)
 choice=$(printf "%s\n" "${!config[@]}" | sort | rofi -dmenu | cut -f 1)
-file=${config[$choice]}
+if [[ -v "config[$choice]" ]] ; then
+  file=${config[$choice]}
+fi
 
 if [[ ! -z "$choice" ]] && [ -f "$file" ];
-    then $EDITOR $file
-    # then $TERMINAL -e $EDITOR $file
-else
-    echo $file not found
+then $EDITOR $file
+  # then $TERMINAL -e $EDITOR $file
+elif [ -f "$file" ];
+then echo $file not found
 fi
 
