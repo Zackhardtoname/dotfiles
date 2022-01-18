@@ -5,7 +5,7 @@ TERMINAL="konsole"
 EDITOR="nvim"
 declare -A config
 
-# add config file names here
+# add config file names
 config[config_opener]=~/zack_setup_env/config_opener.sh
 config[git]=~/.gitconfig
 config[ssh]=~/.ssh/config
