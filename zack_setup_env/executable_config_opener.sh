@@ -1,5 +1,5 @@
 #!/bin/bash
-# script to open config file to edit
+# A script to open a config file to edit
 
 TERMINAL="konsole"
 EDITOR="nvim"
