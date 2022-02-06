@@ -512,7 +512,7 @@ bindsym XF86AudioPrev exec playerctl previous
 ##################################################
 # Personal
 bindsym $mod+Shift+p exec systemctl reboot
-bindsym mod1+a exec flameshot gui
+bindsym mod1+a exec QT_SCREEN_SCALE_FACTORS='' flameshot gui
 # bindsym $mod+t exec --no-startup-id typora /home/zack/Dropbox/TODOs.md
 
 # move focused workspace between monitors

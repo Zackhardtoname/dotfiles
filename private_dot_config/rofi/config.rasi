@@ -1,4 +1,4 @@
 configuration {
-  font: "System San Francisco Display 25";
+  font: "System San Francisco Display 30";
 }
 @import "/usr/share/rofi/themes/android_notification.rasi"

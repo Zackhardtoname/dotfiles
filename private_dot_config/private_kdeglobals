@@ -117,7 +117,7 @@ Breadcrumb Navigation=false
 Decoration position=2
 LocationCombo Completionmode=5
 PathCombo Completionmode=5
-Preview Width=260
+Preview Width=301
 Show Bookmarks=true
 Show Full Path=false
 Show Inline Previews=false
@@ -131,8 +131,8 @@ Speedbar Width=352
 View Style=DetailTree
 
 [KScreen]
-ScaleFactor=2
-ScreenScaleFactors=DP-0=2;DP-1=2;HDMI-0=2;DP-2=2;DP-3=2;DP-4=2;DP-5=2;USB-C-0=2;
+ScaleFactor=2.5
+ScreenScaleFactors=DP-0=2.5;DP-1=2.5;HDMI-0=2.5;DP-2=2.5;DP-3=2.5;DP-4=2.5;DP-5=2.5;USB-C-0=2.5;
 
 [KShortcutsDialog Settings]
 Dialog Size=1054,815
