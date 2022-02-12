@@ -16,6 +16,7 @@ endif
 
 let g:deoplete#enable_at_startup = 1
 
+Plug 'navicore/vissort.vim'
 Plug 'tpope/vim-surround'
 
 Plug 'luochen1990/rainbow'

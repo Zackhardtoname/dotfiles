@@ -315,34 +315,35 @@ mode "resize" {
 # bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
+# exec --no-startup-id $term -p 'LocalTabTitleFormat=dropdown_konsole'
+# exec --no-startup-id blueman-applet
+# exec --no-startup-id dropbox
+# exec --no-startup-id redshift
+# exec --no-startup-id start_conky_green
+# exec --no-startup-id start_conky_maia
+# exec --no-startup-id xautolock -time 10 -locker blurlock
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# exec_always --no-startup-id sbxkb
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id QT_SCREEN_SCALE_FACTORS='' flameshot & 
+exec --no-startup-id barrier
+exec --no-startup-id clipit
+exec --no-startup-id discord
+exec --no-startup-id dolphin
+exec --no-startup-id eval `ssh-agent`
 exec --no-startup-id nitrogen --restore; # sleep 1; # compton -b
 exec --no-startup-id nm-applet
-exec --no-startup-id xfce4-power-manager
+exec --no-startup-id obs --startvirtualcam
 exec --no-startup-id pamac-tray
-exec --no-startup-id clipit
+exec --no-startup-id rescuetime 
+exec --no-startup-id signal-desktop
 exec --no-startup-id xbindkeys
-# exec --no-startup-id redshift
-exec --no-startup-id eval `ssh-agent`
-# exec --no-startup-id blueman-applet
-# exec_always --no-startup-id sbxkb
-# exec --no-startup-id start_conky_maia
-# exec --no-startup-id start_conky_green
-# exec --no-startup-id xautolock -time 10 -locker blurlock
-exec_always --no-startup-id ff-theme-util
-exec_always --no-startup-id fix_xcursor
+exec --no-startup-id xfce4-power-manager
 exec /usr/bin/fcitx5
 # set correct screen wallpaper (that kicks in before nitrogen)
 exec xrandr --dpi 192
-# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-# exec --no-startup-id $term -p 'LocalTabTitleFormat=dropdown_konsole'
-# exec --no-startup-id dropbox
-exec --no-startup-id barrier
-exec --no-startup-id rescuetime 
-exec --no-startup-id dolphin
-exec --no-startup-id obs --startvirtualcam
-exec --no-startup-id discord
+exec_always --no-startup-id ff-theme-util
+exec_always --no-startup-id fix_xcursor
 # chrome is always out of shape and can't find a good way to fix it
 exec "sh -c 'sleep 3; i3-resurrect restore -w 1:1:🌐'"
 # exec --no-startup-id i3-msg 'workspace 1:1:🌐; exec google-chrome-stable;'

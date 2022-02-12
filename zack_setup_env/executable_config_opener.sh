@@ -15,6 +15,7 @@ config[pacman]=/etc/pacman.conf
 config[polybar]=~/.config/polybar/config
 config[profile]=~/.common_profile
 config[rc]=~/.commonrc
+config[rofi]=~/.config/rofi/config.rasi
 config[nvim]=~/.config/nvim/init.vim
 config[vim]=~/.vimrc
 
