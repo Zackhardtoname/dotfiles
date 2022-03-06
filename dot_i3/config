@@ -166,7 +166,7 @@ workspace $ws2 output primary
 workspace $ws4 output primary
 workspace $ws5 output primary
 workspace $ws6 output primary
-
+exec i3-msg move $ws3 to output up
 # workspace $ws3 output USB-C-0
 # workspace $ws7 output USB-C-0
 # workspace $ws8 output USB-C-0
@@ -338,7 +338,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id obs --startvirtualcam
 exec --no-startup-id pamac-tray
 exec --no-startup-id rescuetime 
-exec --no-startup-id signal-desktop
+exec --no-startup-id signal-desktop --start-in-tray --use-tray-icon
 exec --no-startup-id xbindkeys
 exec --no-startup-id xfce4-power-manager
 exec /usr/bin/fcitx5
