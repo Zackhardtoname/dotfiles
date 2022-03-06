@@ -141,6 +141,7 @@ History Items[$e]=file:$HOME/drive/Assignment/Youtube/images,file:$HOME/cache/mo
 
 [General]
 BrowserApplication=google-chrome.desktop
+ColorSchemeHash=9163139877916089673a361083a2231d380293d7
 Name=KDE-Story
 shadeSortColumn=true
 widgetStyle=Breeze
@@ -159,7 +160,7 @@ Breadcrumb Navigation=false
 Decoration position=2
 LocationCombo Completionmode=5
 PathCombo Completionmode=5
-Preview Width=258
+Preview Width=351
 Show Bookmarks=true
 Show Full Path=false
 Show Inline Previews=false
@@ -169,7 +170,7 @@ Show hidden files=true
 Sort by=Name
 Sort directories first=true
 Sort reversed=false
-Speedbar Width=352
+Speedbar Width=188
 View Style=DetailTree
 
 [KScreen]

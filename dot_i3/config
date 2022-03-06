@@ -25,7 +25,8 @@ floating_modifier $mod
 
 # bindsym $mod+u border none
 bindsym $mod+y border pixel 1
-bindsym $mod+n border normal
+# bindsym $mod+n border normal
+bindsym $mod+n exec signal-desktop
 
 # start a terminal
 # bindsym $mod+Return exec gnome-terminal
@@ -60,6 +61,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+c exec google-chrome-stable
+bindsym $mod+p exec "~/github/swift_media_controller/.venv/bin/python ~/github/swift_media_controller/controller.py"
 bindsym $mod+F3 exec dolphin
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec dolphin_pkexec
@@ -119,7 +121,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # toggle sticky
 bindsym $mod+Shift+s sticky toggle
