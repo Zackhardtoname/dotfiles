@@ -60,7 +60,7 @@ Plug 'honza/vim-snippets'
 "let g:ycm_key_list_previous_completion=[]
 
 Plug '907th/vim-auto-save'
-let g:auto_save = 1
+let g:auto_save = 0
 			
 Plug 'tpope/vim-unimpaired'
 
@@ -128,56 +128,60 @@ set splitbelow splitright
 
 
 "" Commands
-imap jk <Esc>
+inoremap jk <Esc>
 " Disabled due to get rid of lag for 'mk'
-" imap kj <Esc> 
-imap JK <Esc>
-imap KJ <Esc>
+" map kj <Esc> 
+inoremap JK <Esc>
+inoremap KJ <Esc>
 
 " new line without entering Insert mode
-nmap <silent> [<space>  :<c-u>put!=repeat([''],v:count)<bar>']+1<cr>
-nmap <CR> o<Esc>
+nnoremap <silent> [<space>  :<c-u>put!=repeat([''],v:count)<bar>']+1<cr>
+nnoremap <CR> o<Esc>
 
 " Press <leader> Enter to remove search highlights
-map <silent> <leader><cr> :noh<cr>
+noremap <silent> <leader><cr> :noh<cr>
 
 " Write to read only file
 cmap w!! w !sudo tee % >/dev/null
 
 " C-v to paste in insert mode
-imap <c-v> <esc>:set paste<cr>a<c-r>=getreg('+')<cr><esc>:set nopaste<cr>mi`[=`]`ia
+inoremap <c-v> <esc>:set paste<cr>a<c-r>=getreg('+')<cr><esc>:set nopaste<cr>mi`[=`]`ia
 
 " In insert or command mode, move normally by using Ctrl
-imap <C-h> <Left>
-imap <C-j> <Down>
-imap <C-k> <Up>
-imap <C-l> <Right>
-cmap <C-h> <Left>
-cmap <C-j> <Down>
-cmap <C-k> <Up>
-cmap <C-l> <Right>
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+cnoremap <C-h> <Left>
+cnoremap <C-j> <Down>
+cnoremap <C-k> <Up>
+cnoremap <C-l> <Right>
 
-nmap <leader>g :Goyo<CR>
+nnoremap <leader>g :Goyo<CR>
 " Quickly source .vimrc
-nmap <leader>r :source $MYVIMRC<CR>
-" nmap <leader>r :source $MYVIMRC <bar> :call UltiSnips#RefreshSnippets()<CR>
+nnoremap <leader>r :source $MYVIMRC<CR>
+" map <leader>r :source $MYVIMRC <bar> :call UltiSnips#RefreshSnippets()<CR>
 " Select all text
-nmap <C-a> ggVG
+nnoremap <C-a> ggVG
+
+" Scrolling
+nnoremap d <C-d>
+nnoremap - dd
 
 " Quick Save not shift s due to IdeaVim problems
-nmap <C-s> :w<CR>
-imap <C-s> <esc>:w<CR>i<Right>
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <esc>:w<CR>i<Right>
 
 " Yank to end of line
-nmap Y y$
+nnoremap Y y$
 "Delete to the end of line
-nmap D d$
+nnoremap , d$
 
 " use Ctrl-^ to toggle "Caps Lock"
-" Execute 'lmap x X' and 'lmap X x' for each letter a-z.
+" Execute 'map x X' and 'map X x' for each letter a-z.
 for c in range(char2nr('A'), char2nr('Z'))
-  execute 'lmap ' . nr2char(c+32) . ' ' . nr2char(c)
-  execute 'lmap ' . nr2char(c) . ' ' . nr2char(c+32)
+  execute 'lnoremap ' . nr2char(c+32) . ' ' . nr2char(c)
+  execute 'lnoremap ' . nr2char(c) . ' ' . nr2char(c+32)
 endfor
 
 " Kill the capslock when leaving insert mode.
@@ -195,4 +199,4 @@ set spelllang=en_us
 hi clear SpellBad 
 " autocmd VimEnter * 
 hi SpellBad ctermfg=NONE ctermbg=NONE cterm=underline
-" imap <C-s> <c-g>u<Esc>[s1z=`]a<c-g>u
+" inoremap <C-s> <c-g>u<Esc>[s1z=`]a<c-g>u
