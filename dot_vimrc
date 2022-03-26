@@ -76,16 +76,16 @@ autocmd InsertEnter,InsertLeave * set cul!
 setlocal spell
 set spelllang=en_us
 autocmd VimEnter * hi SpellBad ctermfg=NONE ctermbg=NONE cterm=underline
-" inoremap <C-s> <c-g>u<Esc>[s1z=`]a<c-g>u
+" imap <C-s> <c-g>u<Esc>[s1z=`]a<c-g>u
 
-inoremap jk <Esc>
+imap jk <Esc>
 " Disabled due to get rid of lag for 'mk'
-" inoremap kj <Esc> 
-inoremap JK <Esc>
-inoremap KJ <Esc>
+" imap kj <Esc> 
+imap JK <Esc>
+imap KJ <Esc>
 
 " new line without entering Insert mode
-nnoremap <silent> [<space>  :<c-u>put!=repeat([''],v:count)<bar>']+1<cr>
+nmap <silent> [<space>  :<c-u>put!=repeat([''],v:count)<bar>']+1<cr>
 nmap <CR> o<Esc>
 
 " theme (must be after plugins)
@@ -138,7 +138,7 @@ set ignorecase
 " Overrides ignorecase if pattern contains upcase
 set smartcase
 " Press <leader> Enter to remove search highlights
-noremap <silent> <leader><cr> :noh<cr>
+map <silent> <leader><cr> :noh<cr>
 
 " Wildmenu better complete
 set wildmenu
@@ -157,44 +157,42 @@ cmap w!! w !sudo tee % >/dev/null
 "" Mappings
 
 " C-v to paste in insert mode
-inoremap <c-v> <esc>:set paste<cr>a<c-r>=getreg('+')<cr><esc>:set nopaste<cr>mi`[=`]`ia
+imap <c-v> <esc>:set paste<cr>a<c-r>=getreg('+')<cr><esc>:set nopaste<cr>mi`[=`]`ia
 
 " In insert or command mode, move normally by using Ctrl
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
-cnoremap <C-h> <Left>
-cnoremap <C-j> <Down>
-cnoremap <C-k> <Up>
-cnoremap <C-l> <Right>
+imap <C-h> <Left>
+imap <C-j> <Down>
+imap <C-k> <Up>
+imap <C-l> <Right>
+cmap <C-h> <Left>
+cmap <C-j> <Down>
+cmap <C-k> <Up>
+cmap <C-l> <Right>
 
 " Quickly source .vimrc
-nnoremap <leader>r :source $MYVIMRC <bar> :call UltiSnips#RefreshSnippets()<CR>
-" Quickly quit editting without save
-nnoremap <leader>q :q!<CR>
+nmap <leader>r :source $MYVIMRC <bar> :call UltiSnips#RefreshSnippets()<CR>
 " Select all text
-nnoremap vA ggVG
+nmap vA ggVG
 
 " Quick Save not shift s due to IdeaVim problems
-nnoremap <C-s> :w<CR>
-inoremap <C-s> <esc>:w<CR>i<Right>
+nmap <C-s> :w<CR>
+imap <C-s> <esc>:w<CR>i<Right>
 
 " Yank to end of line
-nnoremap Y y$
+nmap Y y$
 "Delete to the end of line
-nnoremap D d$
+nmap D d$
 
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+map <Up> <NOP>
+map <Down> <NOP>
+map <Left> <NOP>
+map <Right> <NOP>
 
 " use Ctrl-^ to toggle "Caps Lock"
-" Execute 'lnoremap x X' and 'lnoremap X x' for each letter a-z.
+" Execute 'lmap x X' and 'lmap X x' for each letter a-z.
 for c in range(char2nr('A'), char2nr('Z'))
-  execute 'lnoremap ' . nr2char(c+32) . ' ' . nr2char(c)
-  execute 'lnoremap ' . nr2char(c) . ' ' . nr2char(c+32)
+  execute 'lmap ' . nr2char(c+32) . ' ' . nr2char(c)
+  execute 'lmap ' . nr2char(c) . ' ' . nr2char(c+32)
 endfor
 
 " Kill the capslock when leaving insert mode.
