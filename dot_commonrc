@@ -5,6 +5,8 @@
 # echo commonrc
 DIR=./Downloads; [ -d $DIR ] && cd $DIR
 
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs direnv asdf virtualenv anaconda pyenv goenv nodenv nvm nodeenv rbenv rvm fvm luaenv jenv plenv phpenv scalaenv haskell_stack kubecontext terraform aws_eb_env azure gcloud google_app_cred context nordvpn ranger nnn xplr vim_shell midnight_commander nix_shell todo timewarrior taskwarrior time newline)
+
 for FILE in ~/.fzf.bash ~/.bash_aliases ~/.bash_docker ~/.zsh_aliases ~/.workrc
 do
   [ -f $FILE ] && . $FILE
@@ -21,7 +23,6 @@ alias b="bat"
 alias f="find -type d,f -name"
 alias k="mkdir tex && cd tex && v"
 alias res="pkill --oldest chrome; sleep 1; sudo reboot"
-alias m='/opt/msigd/msigd'
 alias o='xdg-open'
 alias ok='fuck'
 alias v="nvim"
@@ -43,6 +44,11 @@ alias hh=hstr                    # hh to be alias for hstr
 function s {
   pdfgrep -i -H -n -r $1
 }  
+
+function q {
+  gdate +%r -d "$1:$2:$3 UTC"
+  gdate -d "$1:$2 UTC"
+}
 
 function cd() {
   builtin cd "$@"

@@ -17,11 +17,11 @@ endif
 let g:deoplete#enable_at_startup = 1
 
 Plug 'navicore/vissort.vim'
+Plug 'vim-scripts/RltvNmbr.vim'
+Plug 'tpope/vim-surround'
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
-
 Plug 'junegunn/goyo.vim'
-
 Plug 'lervag/vimtex'
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
@@ -38,19 +38,15 @@ let g:vimtex_quickfix_open_on_warning = 0
     "   },
     "  }
 let g:vimtex_compiler_progname = 'nvr'
-
 Plug 'KeitaNakamura/tex-conceal.vim'
 set conceallevel=2
 let g:tex_conceal='abdmg'
-
 Plug 'morhetz/gruvbox'
-
 Plug 'SirVer/ultisnips'
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 let g:UltiSnipsListSnippets = '<s-tab>'
-
 Plug 'honza/vim-snippets'
 
 "Plug 'zxqfl/tabnine-vim'
@@ -59,15 +55,12 @@ Plug 'honza/vim-snippets'
 
 Plug '907th/vim-auto-save'
 let g:auto_save = 0
-			
 Plug 'tpope/vim-unimpaired'
-
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-line'
 call plug#end()
 
 " editor
-set number
 set ts=4 sw=4
 autocmd InsertEnter,InsertLeave * set cul!
 
@@ -93,7 +86,8 @@ set ttimeoutlen=0
 filetype plugin indent on
 
 " Relative numbering
-set number relativenumber
+" set number relativenumber
+set number number
 
 " to make Vim’s :! shell behave like your command prompt
 " set shellcmdflag=-ic

@@ -21,9 +21,6 @@ export QT_IM_MODULE=ibus
 export PIPENV_VENV_IN_PROJECT=enabled
 export IDEA_JDK=/usr/lib/jvm/jdk-jetbrains
 
-# Study Together
-export STUDY_TOGETHER_MODE=dev
-
 # Personal
 for FILE in ~/.credentials ~/.work_profile
 do
