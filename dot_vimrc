@@ -154,12 +154,10 @@ nnoremap <leader>r :source $MYVIMRC<CR>
 " map <leader>r :source $MYVIMRC <bar> :call UltiSnips#RefreshSnippets()<CR>
 " Select all text
 nnoremap <C-a> ggVG
-nnoremap , dd
-nnoremap c s
 
 " Scrolling
-nnoremap d <C-d>
-nnoremap s <C-u>
+nnoremap <Bs> <C-d>
+nnoremap <Tab> <C-u>
 
 " Quick Save not shift s due to IdeaVim problems
 nnoremap <C-s> :w<CR>
@@ -168,7 +166,7 @@ inoremap <C-s> <esc>:w<CR>i<Right>
 " Yank to end of line
 nnoremap Y y$
 "Delete to the end of line
-nnoremap - d$
+nnoremap D d$
 
 " use Ctrl-^ to toggle "Caps Lock"
 " Execute 'map x X' and 'map X x' for each letter a-z.
