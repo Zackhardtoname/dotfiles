@@ -55,17 +55,12 @@ let g:UltiSnipsListSnippets = '<s-tab>'
 
 Plug 'honza/vim-snippets'
 
-
-"Figure support
-inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
-nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
-
 "Plug 'zxqfl/tabnine-vim'
 "let g:ycm_key_list_select_completion=[]
 "let g:ycm_key_list_previous_completion=[]
 
 Plug '907th/vim-auto-save'
-let g:auto_save = 0
+let g:auto_save = 1
 			
 Plug 'tpope/vim-unimpaired'
 
@@ -80,6 +75,7 @@ autocmd InsertEnter,InsertLeave * set cul!
 
 setlocal spell
 set spelllang=en_us
+autocmd VimEnter * hi SpellBad ctermfg=NONE ctermbg=NONE cterm=underline
 " inoremap <C-s> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 inoremap jk <Esc>
