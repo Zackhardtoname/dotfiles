@@ -73,21 +73,6 @@ set number
 set ts=4 sw=4
 autocmd InsertEnter,InsertLeave * set cul!
 
-setlocal spell
-set spelllang=en_us
-autocmd VimEnter * hi SpellBad ctermfg=NONE ctermbg=NONE cterm=underline
-" imap <C-s> <c-g>u<Esc>[s1z=`]a<c-g>u
-
-imap jk <Esc>
-" Disabled due to get rid of lag for 'mk'
-" imap kj <Esc> 
-imap JK <Esc>
-imap KJ <Esc>
-
-" new line without entering Insert mode
-nmap <silent> [<space>  :<c-u>put!=repeat([''],v:count)<bar>']+1<cr>
-nmap <CR> o<Esc>
-
 " theme (must be after plugins)
 let g:gruvbox_guisp_fallback = "bg"
 colorscheme gruvbox
@@ -99,7 +84,7 @@ function! AdjustWindowHeight(minheight, maxheight)
   exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
 endfunction
 
-set clipboard^=unnamed
+set clipboard^=unnamed,unnamedplus
 set mouse=a
 
 " Time out for key mapping and sequence respectively
@@ -126,10 +111,6 @@ set softtabstop=2
 " Never scroll all the way to the bottom of the page
 set scrolloff=3
 
-" Set all registers to clipboard. Maybe change at a later date to better take
-" advantage of registers
-set clipboard=unnamedplus
-
 " Highlight while search
 set incsearch
 " Enable Highlight Search
@@ -137,8 +118,6 @@ set hlsearch
 set ignorecase
 " Overrides ignorecase if pattern contains upcase
 set smartcase
-" Press <leader> Enter to remove search highlights
-map <silent> <leader><cr> :noh<cr>
 
 " Wildmenu better complete
 set wildmenu
@@ -149,12 +128,21 @@ set splitbelow splitright
 
 
 "" Commands
+imap jk <Esc>
+" Disabled due to get rid of lag for 'mk'
+" imap kj <Esc> 
+imap JK <Esc>
+imap KJ <Esc>
+
+" new line without entering Insert mode
+nmap <silent> [<space>  :<c-u>put!=repeat([''],v:count)<bar>']+1<cr>
+nmap <CR> o<Esc>
+
+" Press <leader> Enter to remove search highlights
+map <silent> <leader><cr> :noh<cr>
 
 " Write to read only file
 cmap w!! w !sudo tee % >/dev/null
-
-
-"" Mappings
 
 " C-v to paste in insert mode
 imap <c-v> <esc>:set paste<cr>a<c-r>=getreg('+')<cr><esc>:set nopaste<cr>mi`[=`]`ia
@@ -169,10 +157,12 @@ cmap <C-j> <Down>
 cmap <C-k> <Up>
 cmap <C-l> <Right>
 
+nmap <leader>g :Goyo<CR>
 " Quickly source .vimrc
-nmap <leader>r :source $MYVIMRC <bar> :call UltiSnips#RefreshSnippets()<CR>
+nmap <leader>r :source $MYVIMRC<CR>
+" nmap <leader>r :source $MYVIMRC <bar> :call UltiSnips#RefreshSnippets()<CR>
 " Select all text
-nmap vA ggVG
+nmap <C-a> ggVG
 
 " Quick Save not shift s due to IdeaVim problems
 nmap <C-s> :w<CR>
@@ -182,11 +172,6 @@ imap <C-s> <esc>:w<CR>i<Right>
 nmap Y y$
 "Delete to the end of line
 nmap D d$
-
-map <Up> <NOP>
-map <Down> <NOP>
-map <Left> <NOP>
-map <Right> <NOP>
 
 " use Ctrl-^ to toggle "Caps Lock"
 " Execute 'lmap x X' and 'lmap X x' for each letter a-z.
@@ -198,21 +183,16 @@ endfor
 " Kill the capslock when leaving insert mode.
 autocmd InsertLeave * set iminsert=0
 
-" let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-"      execute "set rtp+=" . g:opamshare . "/merlin/vim"
-" autocmd FileType ocaml execute "set rtp+=" . substitute(system('opam config var share'), '\n$', '', '''') . "/ocp-indent/vim/indent/ocaml.vim"
-
-" filetype plugin on
-" set omnifunc=syntaxcomplete#Complete
-"
-" if !exists('g:deoplete#custom#var()')
-"   let g:deoplete#omni#input_patterns = {}
-" endif
-" let g:deoplete#omni#input_patterns.ocaml = '[^. *\t]\.\w*|\s\w*|#'
-
 if !exists('g:deoplete#omni_patterns')
   call deoplete#custom#var('omni', 'input_patterns', {})
 endif
 call deoplete#custom#var('omni', 'input_patterns', {'ocaml': ['[^. *\t]\.\w*|\s\w*|#']})
 
 syntax on
+
+setlocal spell
+set spelllang=en_us
+hi clear SpellBad 
+" autocmd VimEnter * 
+hi SpellBad ctermfg=NONE ctermbg=NONE cterm=underline
+" imap <C-s> <c-g>u<Esc>[s1z=`]a<c-g>u
