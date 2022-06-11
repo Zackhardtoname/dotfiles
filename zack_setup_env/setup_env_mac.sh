@@ -56,5 +56,5 @@ brew install --cask font-fira-code
 #    "^\UF703" = moveWordRight:;
 #    "^$\UF702" = moveWordLeftAndModifySelection:;
 #    "^$\UF703" = moveWordRightAndModifySelection:;
-#  }
+# }
  
