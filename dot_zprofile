@@ -3,3 +3,4 @@
 [ -f ~/.common_profile ] && . ~/.common_profile
 
 export JAVA_TOOLS_OPTIONS="-Dlog4j2.formatMsgNoLookups=true"
+eval "$(/opt/homebrew/bin/brew shellenv)"

@@ -21,25 +21,25 @@ Plug 'vim-scripts/RltvNmbr.vim'
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 Plug 'junegunn/goyo.vim'
-Plug 'lervag/vimtex'
-let g:tex_flavor='latex'
-let g:vimtex_view_method='zathura'
-let g:vimtex_quickfix_mode=2
-"disable all warnings
-let g:vimtex_quickfix_latexlog = {'default' : 0}
-let g:vimtex_quickfix_open_on_warning = 0
-" Disable overfull/underfull \hbox and all package warnings
-" let g:vimtex_quickfix_latexlog = {
-    "   'overfull' : 0,
-    "   'underfull' : 0,
-    "   'packages' : {
-    "     'default' : 0,
-    "   },
-    "  }
-let g:vimtex_compiler_progname = 'nvr'
-Plug 'KeitaNakamura/tex-conceal.vim'
-set conceallevel=2
-let g:tex_conceal='abdmg'
+" Plug 'lervag/vimtex'
+" let g:tex_flavor='latex'
+" let g:vimtex_view_method='zathura'
+" let g:vimtex_quickfix_mode=2
+" "disable all warnings
+" let g:vimtex_quickfix_latexlog = {'default' : 0}
+" let g:vimtex_quickfix_open_on_warning = 0
+" " Disable overfull/underfull \hbox and all package warnings
+" " let g:vimtex_quickfix_latexlog = {
+"     "   'overfull' : 0,
+"     "   'underfull' : 0,
+"     "   'packages' : {
+"     "     'default' : 0,
+"     "   },
+"     "  }
+" let g:vimtex_compiler_progname = 'nvr'
+" Plug 'KeitaNakamura/tex-conceal.vim'
+" set conceallevel=2
+" let g:tex_conceal='abdmg'
 Plug 'morhetz/gruvbox'
 Plug 'SirVer/ultisnips'
 let g:UltiSnipsExpandTrigger = '<tab>'

@@ -107,8 +107,12 @@ function k {
 }  
 
 case "$(uname -s)" in
-  Darwin | Linux)
-  # mac or linux
+  Linux)
+    eval $(thefuck --alias)
+    ;;
+  Darwin)
+  # mac
+    eval "$(pyenv init -)"
     eval $(thefuck --alias)
     ;;
   CYGWIN*|MINGW32*|MSYS*|MINGW*)
