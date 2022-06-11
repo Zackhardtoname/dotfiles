@@ -3,7 +3,7 @@
 touch ~/.hushlogin
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-brew install hstr neovim gh thefuck zoxide pyenv
+brew install hstr neovim gh thefuck zoxide pyenv htop
 gh auth login
 # Create ~/.config/chezmoi/chezmoi.toml
 brew install chezmoi
