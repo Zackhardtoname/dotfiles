@@ -1,4 +1,4 @@
-# Download Signal, Maccy, Rectangle, Snipaste, MonitorControl
+# Download Signal, Maccy, Rectangle, Snipaste, MonitorControl, SMPlayer
 
 touch ~/.hushlogin
 
