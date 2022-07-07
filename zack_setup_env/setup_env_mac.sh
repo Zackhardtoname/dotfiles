@@ -1,9 +1,9 @@
-# Download Signal, Maccy, Rectangle, Snipaste, MonitorControl, SMPlayer, Adobe
+# Download Signal, Maccy, Rectangle, Snipaste, MonitorControl
 
 touch ~/.hushlogin
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-brew install hstr neovim gh thefuck zoxide pyenv htop tldr
+brew install hstr neovim gh thefuck zoxide pyenv
 gh auth login
 # Create ~/.config/chezmoi/chezmoi.toml
 brew install chezmoi
@@ -30,12 +30,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-# Import PyCharm settings; update plugins; install relative line numbers manually; import settings again; 
-
-# OS
-# Use command + left/right arrow to jump by word (instead of beginning/end of lines)
-# System Preferences → Keyboard → Shortcuts and uncheck the Mission Control shortcuts "Move left a space" and "Move right a space"
+# Import PyCharm settings; update plugins; import settings again
 
 # create ~/Library/KeyBindings/ and save a property list like this as DefaultKeyBinding.dict
 # {
@@ -61,5 +56,5 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 #    "^\UF703" = moveWordRight:;
 #    "^$\UF702" = moveWordLeftAndModifySelection:;
 #    "^$\UF703" = moveWordRightAndModifySelection:;
-# }
+#  }
  
