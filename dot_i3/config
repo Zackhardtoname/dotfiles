@@ -339,7 +339,7 @@ exec xrandr --dpi 192
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 # chrome is always out of shape and can't find a good way to fix it
-exec "sh -c 'sleep 3; i3-resurrect restore -w 1:1:🌐'"
+exec "sh -c 'sleep 3; i3-resurrect restore -w 1:1:🌐; i3-resurrect restore -w 3:3:📂'"
 # exec --no-startup-id i3-msg 'workspace 1:1:🌐; exec google-chrome-stable;'
 # exec pkill -f chrome; exec google-chrome-stable;
 # exec --no-startup-id albert // built-in autostart
