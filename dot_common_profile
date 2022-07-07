@@ -30,3 +30,4 @@ done
 #     . ~/jest
 # fi
 
+eval "$(/opt/homebrew/bin/brew shellenv)"

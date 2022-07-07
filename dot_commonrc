@@ -1,8 +1,8 @@
 # run every time you launch a non-login shell
 # here: aliases, functions
 # individual rc: custom prompts, history customizations
-
 # echo commonrc
+
 DIR=./Downloads; [ -d $DIR ] && cd $DIR
 
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs direnv asdf virtualenv anaconda pyenv goenv nodenv nvm nodeenv rbenv rvm fvm luaenv jenv plenv phpenv scalaenv haskell_stack kubecontext terraform aws_eb_env azure gcloud google_app_cred context nordvpn ranger nnn xplr vim_shell midnight_commander nix_shell todo timewarrior taskwarrior time newline)
