@@ -1,4 +1,4 @@
-# Download Signal, Maccy, Rectangle, Snipaste, MonitorControl, SMPlayer
+# Download Signal, Maccy, Rectangle, Snipaste, MonitorControl, SMPlayer, Adobe
 
 touch ~/.hushlogin
 
@@ -30,7 +30,12 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
-# Import PyCharm settings; update plugins; import settings again
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+# Import PyCharm settings; update plugins; install relative line numbers manually; import settings again; 
+
+# OS
+# Use command + left/right arrow to jump by word (instead of beginning/end of lines)
+# System Preferences → Keyboard → Shortcuts and uncheck the Mission Control shortcuts "Move left a space" and "Move right a space"
 
 # create ~/Library/KeyBindings/ and save a property list like this as DefaultKeyBinding.dict
 # {
