@@ -141,7 +141,10 @@ fi
 
 eval "$(zoxide init --cmd d zsh)"
 
-
+case "$(uname -s)" in
+    Linux*)     source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme;; #machine=Linux;;
+    Darwin*)    source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme;; #machine=Mac;;
+esac
 
 export JAVA_TOOLS_OPTIONS="-Dlog4j2.formatMsgNoLookups=true"
 
