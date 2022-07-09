@@ -30,6 +30,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
+
 # Import PyCharm settings; update plugins; import settings again
 
 # create ~/Library/KeyBindings/ and copy DefaultKeyBinding.dict there
