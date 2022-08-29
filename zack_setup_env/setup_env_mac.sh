@@ -3,7 +3,7 @@
 touch ~/.hushlogin
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-brew install hstr neovim gh thefuck zoxide pyenv coreutils
+brew install hstr neovim gh thefuck zoxide pyenv
 gh auth login
 # Create ~/.config/chezmoi/chezmoi.toml
 brew install chezmoi
@@ -30,31 +30,8 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
+
 # Import PyCharm settings; update plugins; import settings again
 
-# create ~/Library/KeyBindings/ and save a property list like this as DefaultKeyBinding.dict
-# {
-#    /* Remap Home / End keys */
-#    /* Home Button*/
-#    "\UF729" = "moveToBeginningOfLine:";
-#    /* End Button */
-#    "\UF72B" = "moveToEndOfLine:";
-#    /* Shift + Home Button */
-#    "$\UF729" = "moveToBeginningOfLineAndModifySelection:";
-#    /* Shift + End Button */
-#    "$\UF72B" = "moveToEndOfLineAndModifySelection:";
-#    /* Ctrl + Home Button */
-#    "^\UF729" = "moveToBeginningOfDocument:";
-#    /* Ctrl + End Button */
-#    "^\UF72B" = "moveToEndOfDocument:";
-#    /* Shift + Ctrl + Home Button */
-#    "$^\UF729" = "moveToBeginningOfDocumentAndModifySelection:";
-#    /* Shift + Ctrl + End Button*/
-#    "$^\UF72B" = "moveToEndOfDocumentAndModifySelection:";
-# 
-#    "^\UF702" = moveWordLeft:;
-#    "^\UF703" = moveWordRight:;
-#    "^$\UF702" = moveWordLeftAndModifySelection:;
-#    "^$\UF703" = moveWordRightAndModifySelection:;
-#  }
+# create ~/Library/KeyBindings/ and copy DefaultKeyBinding.dict there
  
