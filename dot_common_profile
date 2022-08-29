@@ -22,7 +22,7 @@ export PIPENV_VENV_IN_PROJECT=enabled
 export IDEA_JDK=/usr/lib/jvm/jdk-jetbrains
 
 # Personal
-for FILE in ~/.credentials ~/.work_profile ~/zack_setup_env/lscolors.sh
+for FILE in ~/.credentials ~/.work_profile
 do
   [ -f $FILE ] && . $FILE
 done

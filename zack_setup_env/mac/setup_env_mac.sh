@@ -33,5 +33,5 @@ brew install --cask font-fira-code
 
 # Import PyCharm settings; update plugins; import settings again
 
-# create ~/Library/KeyBindings/ and copy DefaultKeyBinding.dict there; Then you might need to re-login or reopen apps
-
+# create ~/Library/KeyBindings/ and copy DefaultKeyBinding.dict there
+ 

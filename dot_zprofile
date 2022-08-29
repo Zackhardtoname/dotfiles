@@ -8,7 +8,3 @@ export JAVA_TOOLS_OPTIONS="-Dlog4j2.formatMsgNoLookups=true"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zprofile.post.zsh" ]] && . "$HOME/.fig/shell/zprofile.post.zsh"
-
-
-# Added by Toolbox App
-export PATH="$PATH:/Users/zack/Library/Application Support/JetBrains/Toolbox/scripts"
