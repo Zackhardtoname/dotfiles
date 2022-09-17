@@ -136,12 +136,12 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [DirSelect Dialog]
-DirSelectDialog Size=886,582
-History Items[$e]=file:$HOME/drive/Assignment/Youtube/images,file:$HOME/cache/movies,file:$HOME/Downloads,file:$HOME/cache/movies,file:$HOME/cache/movies,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/kali_shared,file:$HOME/Dropbox (University of Michigan)/Recordings,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/kali_shared,file:$HOME/github/kali,file:$HOME/github/kali
+DirSelectDialog Size=980,592
+History Items[$e]=file:$HOME/drive/Configs/obs,file:$HOME/drive/Assignment/Youtube/images,file:$HOME/cache/movies,file:$HOME/Downloads,file:$HOME/cache/movies,file:$HOME/cache/movies,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/kali_shared,file:$HOME/Dropbox (University of Michigan)/Recordings,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/kali_shared,file:$HOME/github/kali,file:$HOME/github/kali
 
 [General]
 BrowserApplication=google-chrome.desktop
-ColorSchemeHash=d0b3d2da363261958945ede41bfed4e1744dd286
+ColorSchemeHash=bcce7c1c6181c5e14e633cd8301e7a9036b67ac6
 Name=KDE-Story
 shadeSortColumn=true
 widgetStyle=Breeze
