@@ -46,7 +46,9 @@ function frm {
 
   for file in "$@"
   do
-    mv $file "/tmp/${now}_${file}"
+    new_name="${file}_${now}"
+    mv $file $new_name
+    nohup rm -rf $new_name > /tmp/$new_name.log 2>&1 &
   done
 }
 
