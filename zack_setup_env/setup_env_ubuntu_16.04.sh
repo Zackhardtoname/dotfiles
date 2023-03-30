@@ -26,6 +26,7 @@ nvim +PlugInstall +qall
 sudo apt-get update -y
 sudo apt-get install -y xclip
 python3 -m pip install --user --upgrade pynvim
+## run :checkhealth and install the appropriate clipboard provider
 
 # zsh 
 sudo apt update
