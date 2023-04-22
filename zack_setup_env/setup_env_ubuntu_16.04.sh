@@ -61,3 +61,4 @@ curl -sfL https://git.io/chezmoi | sh
 ~/bin/chezmoi init https://github.com/Zackhardtoname/dotfiles.git
 ~/bin/chezmoi update 
 
+touch ~/.hushlogin
