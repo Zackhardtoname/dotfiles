@@ -34,4 +34,6 @@ brew install --cask font-fira-code
 # Import PyCharm settings; update plugins; import settings again
 
 # create ~/Library/KeyBindings/ and copy DefaultKeyBinding.dict there
- 
+
+brew install 1History/onehistory/onehistory
+# Add the script by running `crontab -e` and adding `0 20 * * * ~/zack_scripts/backup_browser_history.sh`
