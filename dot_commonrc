@@ -130,10 +130,5 @@ case "$(uname -s)" in
     ;;
 esac
 
-
-# ocaml 
-# opam configuration
-# test -r /home/zack/.opam/opam-init/init.zsh && . /home/zack/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-
 source ~/.config/broot/launcher/bash/br
 
