@@ -21,7 +21,6 @@ alias l='ls -alhF'
 alias c="chezmoi"
 alias b="bat"
 alias f="find -type d,f -name"
-alias k="mkdir tex && cd tex && v"
 alias res="pkill --oldest chrome; sleep 1; sudo reboot"
 alias o='xdg-open'
 alias ok='fuck'
