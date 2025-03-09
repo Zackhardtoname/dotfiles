@@ -157,3 +157,5 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+export PATH="$PATH:/Applications/screenpipe.app/Contents/MacOS"

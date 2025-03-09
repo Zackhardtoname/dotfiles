@@ -20,6 +20,7 @@ export QT_IM_MODULE=ibus
 
 export PIPENV_VENV_IN_PROJECT=enabled
 export IDEA_JDK=/usr/lib/jvm/jdk-jetbrains
+export MallocNanoZone=0  # https://stackoverflow.com/a/70209891/7053488
 
 # Personal
 for FILE in ~/.credentials ~/.work_profile
