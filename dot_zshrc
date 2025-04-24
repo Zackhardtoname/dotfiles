@@ -159,3 +159,6 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
 export PATH="$PATH:/Applications/screenpipe.app/Contents/MacOS"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/zack/.lmstudio/bin"

@@ -19,7 +19,6 @@ alias l='ls -alhF'
 # alias l='ls -CF'
 # alias ll='ls -alF'
 # alias a="autorandr --change"
-alias c="chezmoi"
 alias b="bat"
 alias f="find -type d,f -name"
 alias res="pkill --oldest chrome; sleep 1; sudo reboot"
@@ -66,7 +65,7 @@ function cd() {
   if [[ -z "$VIRTUAL_ENV" ]] ; then
     ## If env folder is found then activate the vitualenv
       if [[ -d ./.venv ]] ; then
-        source ./.venv/bin/activate
+        source ./.venv/bin/activate pre
       fi
   else
     ## check the current folder belong to earlier VIRTUAL_ENV folder
@@ -119,17 +118,17 @@ function k {
 case "$(uname -s)" in
   Linux)
     eval $(thefuck --alias)
+    alias c="xsel -ib"
     ;;
   Darwin)
   # mac
     eval "$(pyenv init -)"
     eval $(thefuck --alias)
+    alias c="pbcopy"
     ;;
   CYGWIN*|MINGW32*|MSYS*|MINGW*)
     ;;
   *)
     ;;
 esac
-
-source ~/.config/broot/launcher/bash/br
 

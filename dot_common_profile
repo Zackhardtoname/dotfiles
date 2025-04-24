@@ -2,6 +2,19 @@
 # here: environment variable
 
 # echo common_profile
+# Here instead of .common_rc because it is used by .zprofile
+function source_once {
+  case ":$PATH:" in
+   *":$1:"*) :;; # already there
+   *) if [ "$2" = "pre" ]; then
+        PATH="$1:$PATH"
+      else
+        PATH="$PATH:$1"
+      fi
+      ;;
+   esac
+}
+
 export PATH=~/.npm-global/bin:$PATH
 export PATH=/opt:$PATH
 export PATH="$HOME/.local/bin:$PATH"
@@ -27,16 +40,10 @@ for FILE in ~/.credentials ~/.work_profile
 do
   [ -f $FILE ] && . $FILE
 done
-# if [ -f ~/jest ]; then
-#     . ~/jest
-# fi
 
 [ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Disciplined LeetCode
-DISCIPLINE_MODE=dev
 
