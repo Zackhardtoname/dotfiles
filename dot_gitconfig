@@ -1,0 +1,13 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Zackhardtoname
+	email = zack.hardtoname@gmail.com
+[core]
+	autocrlf = input
+	excludesfile = ~/.gitignore_global
+[http]
+	postBuffer = 157286400
