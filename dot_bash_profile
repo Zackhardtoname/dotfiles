@@ -1,3 +1,8 @@
+# Git Bash for Windows doesn't source ~/.bashrc but this file
+if [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
+    . ~/.bashrc
+fi
+
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/bash_profile.pre.bash" ]] && builtin source "$HOME/.fig/shell/bash_profile.pre.bash"
 # echo bash_profile
