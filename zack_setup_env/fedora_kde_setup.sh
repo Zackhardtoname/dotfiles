@@ -4,6 +4,7 @@
 
 sudo dnf install hstr
 sudo dnf install google-chrome-stable git nvim thefuck zoxide
+# Set up git before chezmoi so the repo uses ssh key: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply Zackhardtoname
 
 sudo dnf install python3-pip
