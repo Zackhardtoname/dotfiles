@@ -41,6 +41,3 @@ sudo dnf install htop fastfetch smplayer discord timeshift
 # Install wechat
 # Install snipaste
 # Install pdfstudio 
-
-# Set up snap in Discovery and then set up Launcher for it: https://askubuntu.com/a/989485/1049727
-
