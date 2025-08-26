@@ -25,7 +25,7 @@ IntensityEffect=0
 
 [Colors:Button]
 BackgroundAlternate=30,87,116
-BackgroundNormal=49,54,59
+BackgroundNormal=41,44,48
 DecorationFocus=61,174,233
 DecorationHover=61,174,233
 ForegroundActive=61,174,233
@@ -39,7 +39,7 @@ ForegroundVisited=155,89,182
 
 [Colors:Complementary]
 BackgroundAlternate=30,87,116
-BackgroundNormal=42,46,50
+BackgroundNormal=32,35,38
 DecorationFocus=61,174,233
 DecorationHover=61,174,233
 ForegroundActive=61,174,233
@@ -52,8 +52,8 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [Colors:Header]
-BackgroundAlternate=42,46,50
-BackgroundNormal=49,54,59
+BackgroundAlternate=32,35,38
+BackgroundNormal=41,44,48
 DecorationFocus=61,174,233
 DecorationHover=61,174,233
 ForegroundActive=61,174,233
@@ -66,8 +66,8 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [Colors:Header][Inactive]
-BackgroundAlternate=49,54,59
-BackgroundNormal=42,46,50
+BackgroundAlternate=41,44,48
+BackgroundNormal=32,35,38
 DecorationFocus=61,174,233
 DecorationHover=61,174,233
 ForegroundActive=61,174,233
@@ -94,8 +94,8 @@ ForegroundPositive=23,104,57
 ForegroundVisited=155,89,182
 
 [Colors:Tooltip]
-BackgroundAlternate=42,46,50
-BackgroundNormal=49,54,59
+BackgroundAlternate=32,35,38
+BackgroundNormal=41,44,48
 DecorationFocus=61,174,233
 DecorationHover=61,174,233
 ForegroundActive=61,174,233
@@ -108,8 +108,8 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [Colors:View]
-BackgroundAlternate=35,38,41
-BackgroundNormal=27,30,32
+BackgroundAlternate=29,31,34
+BackgroundNormal=20,22,24
 DecorationFocus=61,174,233
 DecorationHover=61,174,233
 ForegroundActive=61,174,233
@@ -122,8 +122,8 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [Colors:Window]
-BackgroundAlternate=49,54,59
-BackgroundNormal=42,46,50
+BackgroundAlternate=41,44,48
+BackgroundNormal=32,35,38
 DecorationFocus=61,174,233
 DecorationHover=61,174,233
 ForegroundActive=61,174,233
@@ -141,7 +141,7 @@ History Items[$e]=file:$HOME/drive/Assignment/Youtube/images,file:$HOME/cache/mo
 
 [General]
 BrowserApplication=google-chrome.desktop
-ColorSchemeHash=d0b3d2da363261958945ede41bfed4e1744dd286
+ColorSchemeHash=8ff306d9a93379c74540e00506966df24df1798b
 Name=KDE-Story
 shadeSortColumn=true
 widgetStyle=Breeze
@@ -160,7 +160,7 @@ Breadcrumb Navigation=false
 Decoration position=2
 LocationCombo Completionmode=5
 PathCombo Completionmode=5
-Preview Width=351
+Preview Width=135
 Show Bookmarks=true
 Show Full Path=false
 Show Inline Previews=false
@@ -169,6 +169,7 @@ Show Speedbar=true
 Show hidden files=true
 Sort by=Name
 Sort directories first=true
+Sort hidden files last=false
 Sort reversed=false
 Speedbar Width=188
 View Style=DetailTree
@@ -185,9 +186,9 @@ MaximumRemoteSize=0
 
 [WM]
 FakeEntryToKeepThisGroup=true
-activeBackground=49,54,59
+activeBackground=39,44,49
 activeBlend=252,252,252
 activeForeground=252,252,252
-inactiveBackground=42,46,50
+inactiveBackground=32,36,40
 inactiveBlend=161,169,177
 inactiveForeground=161,169,177
