@@ -19,6 +19,7 @@ export PATH=~/.npm-global/bin:$PATH
 export PATH=/opt:$PATH
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH=$PATH:~/GitHub/egos/xpack-riscv-none-elf-gcc-14.2.0-3/bin:~/GitHub/egos/xpack-qemu-riscv-8.2.2-1/bin
 
 export HSTR_CONFIG=hicolor,raw-history-view       # get more colors
 export HISTCONTROL=ignorespace   # leading space hides commands from history

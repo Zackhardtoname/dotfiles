@@ -41,3 +41,8 @@ sudo dnf install htop fastfetch smplayer discord timeshift
 # Install wechat
 # Install snipaste
 # Install pdfstudio 
+
+# Note that the grub update comment is 
+# grub2-mkconfig -o /boot/grub2/grub.cfg
+
+# If snipaste doesn't work or clicking an entry in the KDE clipboard doesn't paste it, just use X11 and force DPI in the GUI settings to 192 (2x the value).

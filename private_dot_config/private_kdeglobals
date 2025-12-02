@@ -135,15 +135,15 @@ ForegroundNormal=252,252,252
 ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
-[DirSelect Dialog]
-DirSelectDialog Size=886,582
-History Items[$e]=file:$HOME/drive/Assignment/Youtube/images,file:$HOME/cache/movies,file:$HOME/Downloads,file:$HOME/cache/movies,file:$HOME/cache/movies,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/kali_shared,file:$HOME/Dropbox (University of Michigan)/Recordings,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/kali_shared,file:$HOME/github/kali,file:$HOME/github/kali
-
 [General]
 BrowserApplication=google-chrome.desktop
-ColorSchemeHash=8ff306d9a93379c74540e00506966df24df1798b
+ColorSchemeHash=2c3f86428c11011a7c64ee1e7f47c274d498ff10
 Name=KDE-Story
+XftAntialias=true
+XftHintStyle=hintslight
+XftSubPixel=none
 shadeSortColumn=true
+toolBarFont=Noto Sans,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 widgetStyle=Breeze
 
 [KDE]
@@ -158,10 +158,7 @@ Allow Expansion=true
 Automatically select filename extension=true
 Breadcrumb Navigation=false
 Decoration position=2
-LocationCombo Completionmode=5
-PathCombo Completionmode=5
-Preview Width=135
-Show Bookmarks=true
+Preview Width=216
 Show Full Path=false
 Show Inline Previews=false
 Show Preview=true

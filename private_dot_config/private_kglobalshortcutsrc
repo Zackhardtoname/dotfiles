@@ -5,9 +5,70 @@ switch-to-activity-3d43632d-6f02-4ad8-ad41-64f103fa3119=none,none,Switch to acti
 
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
-Switch to Last-Used Keyboard Layout=Meta+Alt+L,Meta+Alt+L,
+Switch to Last-Used Keyboard Layout=Meta+Alt+L,Meta+Alt+L,Switch to Last-Used Keyboard Layout
 Switch to Next Keyboard Layout=Ctrl+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
+
+[com.google.Chrome]
+5AF86F748068C0116DED89E81BEC52F6-launch-inline-actions=none,none,Display Inline Actions
+5AF86F748068C0116DED89E81BEC52F6-launch-table-capture-workshop=none,none,Launch Workshop
+7CB962CFB30A6803AA9BCB54D3D68A72-default-action=none,none,Execute default action
+939AB571A86E5EE4C5F32D8CDA40B82B-addSite=none,none,Toggle current site
+939AB571A86E5EE4C5F32D8CDA40B82B-switchEngine=none,none,Theme generation mode
+939AB571A86E5EE4C5F32D8CDA40B82B-toggle=none,none,Toggle extension
+A693AE60355AF1B0BF8964C44581100F-autofill_card=none,none,Autofill the last used card for the current website
+A693AE60355AF1B0BF8964C44581100F-autofill_identity=none,none,Autofill the last used identity for the current website
+A693AE60355AF1B0BF8964C44581100F-autofill_login=none,none,Autofill the last used login for the current website
+A693AE60355AF1B0BF8964C44581100F-generate_password=none,none,Generate and copy a new random password to the clipboard
+A693AE60355AF1B0BF8964C44581100F-lock_vault=none,none,Lock the vault
+AA8B663E1DBEF4E477317F525CD70D02-open-dashboard=none,none,Open dashboard
+AA8B663E1DBEF4E477317F525CD70D02-open-dashboard-with-running-scripts=none,none,Open dashboard with the current tab's URL used as filter
+AA8B663E1DBEF4E477317F525CD70D02-open-new-script=none,none,Open new script tab
+AA8B663E1DBEF4E477317F525CD70D02-toggle-enable=none,none,Toggle enable state
+D293D9352F43ABCC7098473906C91DD1-c000-options-page=none,none,Open the options page
+D293D9352F43ABCC7098473906C91DD1-c020-theme-youtube-dark=none,none,Theme: YouTube™ (Dark)
+D293D9352F43ABCC7098473906C91DD1-c025-theme-enhanced-dark=none,none,Theme: Enhancer for YouTube™
+D293D9352F43ABCC7098473906C91DD1-c030-theme-youtube-deep-dark=none,none,Theme: YouTube-DeepDark
+D293D9352F43ABCC7098473906C91DD1-c040-theme-youtube-deep-dark-custom=none,none,Theme: YouTube-DeepDark (Custom)
+D293D9352F43ABCC7098473906C91DD1-c050-theme-custom-theme=none,none,Theme: Custom theme
+D293D9352F43ABCC7098473906C91DD1-c060-focus-video-player=none,none,Set focus on the video player
+D293D9352F43ABCC7098473906C91DD1-c070-toggle-loop=none,none,Toggle the loop mode
+D293D9352F43ABCC7098473906C91DD1-c080-stop-video=none,none,Stop the video
+D293D9352F43ABCC7098473906C91DD1-c090-reverse-playlist=none,none,Reverse the playlist order
+D293D9352F43ABCC7098473906C91DD1-c100-toggle-volume-booster=none,none,Toggle the volume booster
+D293D9352F43ABCC7098473906C91DD1-c130-toggle-annotations=none,none,Toggle info cards and end screens visibility
+D293D9352F43ABCC7098473906C91DD1-c140-toggle-cinema-mode=none,none,Toggle the cinema mode
+D293D9352F43ABCC7098473906C91DD1-c150-toggle-player-size=none,none,Expand or shrink the video player
+D293D9352F43ABCC7098473906C91DD1-c160-center-video-player=none,none,Center the video player within the viewport
+D293D9352F43ABCC7098473906C91DD1-c170-pop-up-player=none,none,Watch with the pop-up player
+D293D9352F43ABCC7098473906C91DD1-c180-decrease-speed=none,none,Decrease the playback speed
+D293D9352F43ABCC7098473906C91DD1-c190-increase-speed=none,none,Increase the playback speed
+D293D9352F43ABCC7098473906C91DD1-c200-default-speed=none,none,Select the default playback speed
+D293D9352F43ABCC7098473906C91DD1-c210-normal-speed=none,none,Select the normal playback speed
+D293D9352F43ABCC7098473906C91DD1-c220-toggle-video-filters=none,none,Toggle the video filters
+D293D9352F43ABCC7098473906C91DD1-c230-flip-horizontally=none,none,Flip the video horizontally
+D293D9352F43ABCC7098473906C91DD1-c240-flip-vertically=none,none,Flip the video vertically
+D293D9352F43ABCC7098473906C91DD1-c250-take-screenshot=none,none,Take a screenshot of the video
+D293D9352F43ABCC7098473906C91DD1-c260-keyboard-shortcuts=none,none,Display all the keyboard shortcuts for YouTube
+D293D9352F43ABCC7098473906C91DD1-c270-custom-script=none,none,Execute the custom script
+D293D9352F43ABCC7098473906C91DD1-c280-picture-in-picture=none,none,Toggle the Picture-in-Picture mode
+D293D9352F43ABCC7098473906C91DD1-c290-quality-highres=none,none,Select the playback quality “4320p”
+D293D9352F43ABCC7098473906C91DD1-c300-quality-hd2880=none,none,Select the playback quality “2880p”
+D293D9352F43ABCC7098473906C91DD1-c310-quality-hd2160=none,none,Select the playback quality “2160p”
+D293D9352F43ABCC7098473906C91DD1-c320-quality-hd1440=none,none,Select the playback quality “1440p”
+D293D9352F43ABCC7098473906C91DD1-c330-quality-hd1080=none,none,Select the playback quality “1080p”
+D293D9352F43ABCC7098473906C91DD1-c340-quality-hd720=none,none,Select the playback quality “720p”
+D293D9352F43ABCC7098473906C91DD1-c350-quality-large=none,none,Select the playback quality “480p”
+D293D9352F43ABCC7098473906C91DD1-c360-quality-medium=none,none,Select the playback quality “360p”
+D293D9352F43ABCC7098473906C91DD1-c370-quality-small=none,none,Select the playback quality “240p”
+D293D9352F43ABCC7098473906C91DD1-c380-quality-tiny=none,none,Select the playback quality “144p”
+D293D9352F43ABCC7098473906C91DD1-c390-quality-auto=none,none,Select the playback quality “Auto”
+D293D9352F43ABCC7098473906C91DD1-c400-comments-visibility=none,none,Toggle comments visibility
+D293D9352F43ABCC7098473906C91DD1-c410-related-videos-visibility=none,none,Toggle related videos visibility
+EED5CE51E27F94F06AAE292F4F929B8C-toggle-feature-rotateclockwise=none,none,Rotate 90 degrees clockwise
+EED5CE51E27F94F06AAE292F4F929B8C-toggle-feature-rotatecounter=none,none,Rotate 90 degrees counter-clockwise
+EED5CE51E27F94F06AAE292F4F929B8C-toggle-feature-rotatereset=none,none,Reset the rotation
+_k_friendly_name=Google Chrome
 
 [google-chrome]
 5AF86F748068C0116DED89E81BEC52F6-launch-inline-actions=none,none,Display Inline Actions
@@ -199,7 +260,6 @@ MoveZoomUp=none,none,Move Zoomed Area Upwards
 Overview=Meta+W,Meta+W,Toggle Overview
 Setup Window Shortcut=none,,Setup Window Shortcut
 Show Desktop=Meta+D,Meta+D,Peek at Desktop
-ShowDesktopGrid=Ctrl+F8,Ctrl+F8,Show Desktop Grid
 Suspend Compositing=Alt+Shift+F12,Alt+Shift+F12,Suspend Compositing
 Switch One Desktop Down=none,Meta+Ctrl+Down,Switch One Desktop Down
 Switch One Desktop Up=none,Meta+Ctrl+Up,Switch One Desktop Up
@@ -247,10 +307,6 @@ Switch to Screen to the Left=none,,Switch to Screen to the Left
 Switch to Screen to the Right=none,,Switch to Screen to the Right
 Toggle Night Color=none,none,Suspend/Resume Night Light
 Toggle Window Raise/Lower=none,,Toggle Window Raise/Lower
-Walk Through Desktop List=none,none,Walk Through Desktop List
-Walk Through Desktop List (Reverse)=none,none,Walk Through Desktop List (Reverse)
-Walk Through Desktops=none,none,Walk Through Desktops
-Walk Through Desktops (Reverse)=none,none,Walk Through Desktops (Reverse)
 Walk Through Windows=Alt+Tab,Meta+Tab\tAlt+Tab,Walk Through Windows
 Walk Through Windows (Reverse)=Alt+Shift+Backtab,Meta+Shift+Tab\tAlt+Shift+Tab,Walk Through Windows (Reverse)
 Walk Through Windows Alternative=none,none,Walk Through Windows Alternative
@@ -286,7 +342,7 @@ Window One Screen Down=none,,Move Window One Screen Down
 Window One Screen Up=none,,Move Window One Screen Up
 Window One Screen to the Left=none,,Move Window One Screen to the Left
 Window One Screen to the Right=none,,Move Window One Screen to the Right
-Window Operations Menu=Alt+F3,Alt+F3,Window Operations Menu
+Window Operations Menu=Alt+F3,Alt+F3,Window Menu
 Window Pack Down=none,,Move Window Down
 Window Pack Left=none,,Move Window Left
 Window Pack Right=none,,Move Window Right
@@ -370,6 +426,7 @@ _k_friendly_name=Power Management
 powerProfile=Battery\tMeta+B,Battery\tMeta+B,Switch Power Profile
 
 [plasmashell]
+Slideshow Wallpaper Next Image=none,,Next Wallpaper Image
 _k_friendly_name=plasmashell
 activate application launcher=Meta,Meta\tAlt+F1,Activate Application Launcher
 activate task manager entry 1=Meta+1,Meta+1,Activate Task Manager Entry 1
@@ -399,7 +456,6 @@ repeat_action=Ctrl+Alt+R,,Manually Invoke Action on Current Clipboard
 show dashboard=Ctrl+F12,Ctrl+F12,Show Desktop
 show-barcode=none,,Show Barcode…
 show-on-mouse-pos=Alt+`,Meta+V,Show Clipboard Items at Mouse Position
-stop current activity=Meta+S,Meta+S,Stop Current Activity
 switch to next activity=none,,Switch to Next Activity
 switch to previous activity=none,,Switch to Previous Activity
 toggle do not disturb=none,,Toggle do not disturb
@@ -411,6 +467,7 @@ _launch=none
 _launch=Alt+Shift+Space\tAlt+F2\tSearch
 
 [services][org.kde.spectacle.desktop]
+RectangularRegionScreenShot=Alt+A
 _launch=Meta+Shift+S
 
 [yakuake]

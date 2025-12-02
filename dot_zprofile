@@ -6,3 +6,8 @@ export JAVA_TOOLS_OPTIONS="-Dlog4j2.formatMsgNoLookups=true"
 
 # Added by Toolbox App
 source_once "/usr/local/bin"
+
+
+# Added by Toolbox App
+export PATH="$PATH:/home/zack/.local/share/JetBrains/Toolbox/scripts"
+
