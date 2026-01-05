@@ -154,3 +154,4 @@ export JAVA_TOOLS_OPTIONS="-Dlog4j2.formatMsgNoLookups=true"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/zack/.lmstudio/bin"
+. "$HOME/.cargo/env"
