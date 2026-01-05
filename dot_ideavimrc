@@ -1,2 +1,7 @@
 source ~/.vimrc
+
+set noNERDTree
 set easymotion
+
+" Press 'shift-f' to activate AceJump
+" map <S-f> <Action>(AceAction)
