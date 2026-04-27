@@ -37,3 +37,6 @@ brew install --cask font-fira-code
 
 brew install 1History/onehistory/onehistory
 # Add the script by running `crontab -e` and adding `0 20 * * * ~/zack_scripts/backup_browser_history.sh`
+
+defaults write com.apple.finder AppleShowAllFiles -bool true
+killall Finder
