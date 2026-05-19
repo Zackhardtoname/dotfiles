@@ -45,4 +45,4 @@ killall Finder
 # Set up control + arrow to jump by word: https://superuser.com/a/1157575/767739
 
 # Chrome
-# Mac: System Settings → Keyboard → Keyboard Shortcuts → App Shortcuts → Google Chrome → Menu Title “History” → Shortcut ⌃H#
+# Mac: System Settings → Keyboard → Keyboard Shortcuts → App Shortcuts → Google Chrome → Menu Title “History” → Shortcut command (not control) + H#
